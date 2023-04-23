@@ -1,40 +1,49 @@
-from taskmanager import db
+from treatments import db
 
 
-class Category(db.Model):
-    # schema for the Category model
+class Client(db.Model):
+    # schema for the Client model
     id = db.Column(db.Integer, primary_key=True)
-    category_name = db.Column(db.String(25), unique=True, nullable=False)
-    tasks = db.relationship(
-        "Task",
-        backref="category",
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    phone = db.Column(db.String(20), nullable=False)
+    lashes = db.relationship(
+        "Lash",
+        backref="client",
         cascade="all, delete",
         lazy=True
-        )
+    )
+    brows = db.relationship(
+        "Brow",
+        backref="client",
+        cascade="all, delete",
+        lazy=True
+    )
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
-        return self.category_name
+        return self.name
 
 
-class Task(db.Model):
+class Treatment(db.Model):
+    # schema for the Category model
+    id = db.Column(db.Integer, primary_key=True)
+    treatment_name = db.Column(db.String(25), unique=True, nullable=False)
+    lash_type = db.Column(db.String(10), nullable=False)
+    brows_type = db.Column(db.String(10), nullable=False)
+    microblading_type = db.Column(db.String(10), nullable=False)
+    types = db.relationship(
+        "Type",
+        backref="treatment",
+        cascade="all, delete",
+        lazy=True
+    )
+
+    def __repr__(self):
+        # __repr__ to represent itself in the form of a string
+        return self.treatment_name
+
+
+class Type(db.Model):
     # schema for the Task model
     id = db.Column(db.Integer, primary_key=True)
-    task_name = db.Column(db.String(50), unique=True, nullable=False)
-    task_description = db.Column(db.Text, nullable=False)
-    is_urgent = db.Column(db.Boolean, default=False, nullable=False)
-    due_date = db.Column(db.Date, nullable=False)
-    category_id = db.Column(
-        db.Integer,
-        db.ForeignKey(
-            "category.id",
-            ondelete="CASCADE"
-        ),
-        nullable=False
-        )
-
-    def __repr__(self):
-        # __repr__ to represent itself in the form of a string
-        return "#{0} - Task: {1} | Urgent: {2}".format(
-            self.id, self.task_name, self.is_urgent
-        )
