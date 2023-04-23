@@ -1,4 +1,5 @@
 from treatments import db
+from flask import Flask
 from flask_login import LoginManager, UserMixin
 
 app = Flask(__name__)
