@@ -39,6 +39,10 @@ footer {
     background-color: #8d6e63;
 }
 
+.btn:hover {
+    background-color: #53413a;
+}
+
 .intro {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
