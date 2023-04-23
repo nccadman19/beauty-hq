@@ -1,6 +1,6 @@
-from flask import render_template, request
+from flask import render_template, request, flash, redirect, url_for
 from treatments import app, db
-from treatments.models import Client, Treatment, Lash, Brow, Type
+from treatments.models import Client, Treatment, Lash, Brow, Type, User
 from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash
 
@@ -9,6 +9,55 @@ from werkzeug.security import generate_password_hash
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+# login template for beauticians
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        user = User.get_by_username(username)
+        if user and check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for('index'))
+        else:
+            flash('Invalid username or password', 'error')
+    return render_template('login.html')
+
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
+
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        # Check if last name is too long
+        if len(last_name) > 60:
+            flash('Last name is too long', 'danger')
+            return redirect(url_for('register'))
+
+        hashed_password = generate_password_hash(password)
+        user = User(
+            first_name=first_name,
+            last_name=last_name,
+            email=email,
+            password=hashed_password
+        )
+        db.session.add(user)
+        db.session.commit()
+        flash('Account created successfully', 'success')
+        return redirect(url_for('login'))
+    return render_template('register.html')
 
 
 # template for creating a new client
@@ -114,40 +163,3 @@ def create_type():
 def get_types():
     types = Type.query.all()
     return render_template('clients.html', types=types)
-
-
-# login template for beauticians
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        password = request.form.get('password')
-        user = User.get_by_username(username)
-        if user and check_password_hash(user.password, password):
-            login_user(user)
-            return redirect(url_for('index'))
-        else:
-            flash('Invalid username or password', 'error')
-    return render_template('login.html')
-
-
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect(url_for('index'))
-
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        email = request.form.get('email')
-        password = request.form.get('password')
-        hashed_password = generate_password_hash(password)
-        user = User(username=username, email=email, password=hashed_password)
-        db.session.add(user)
-        db.session.commit()
-        flash('Account created successfully', 'success')
-        return redirect(url_for('login'))
-    return render_template('register.html')
