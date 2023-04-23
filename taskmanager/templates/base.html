@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
-    <title>Task Manager</title>
+    <title>Glam Files</title>
 </head>
 
 <body>
@@ -32,14 +32,30 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer blue darken-3">
-        <div class="footer-copyright">
-            <div class="container">
-                For educational purposes only
-                <a class="white-text right" href="https://codeinstitute.net" target="_blank">&copy; Code Institute</a>
+    <footer class="page-footer brown lighten-1 smaller-footer center-align">
+        <div class="container">
+          <div class="row valign-wrapper">
+            <div class="logo">
+              <img src="#" alt="Glam Files Logo">
             </div>
+            <nav class="transparent z-depth-0">
+              <div class="nav-wrapper">
+                <ul class="hide-on-med-and-down right">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Clients</a></li>
+                  <li><a href="#">New Client</a></li>
+                </ul>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+              </div>
+            </nav>
+            <ul class="sidenav" id="mobile-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">New Client</a></li>
+            </ul>
+          </div>
         </div>
-    </footer>
+      </footer>      
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
