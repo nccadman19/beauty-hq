@@ -15,14 +15,14 @@ def home():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form.get('username')
+        email = request.form.get('email')
         password = request.form.get('password')
-        user = User.get_by_username(username)
+        user = User.get_by_email(email)
         if user and check_password_hash(user.password, password):
             login_user(user)
             return redirect(url_for('index'))
         else:
-            flash('Invalid username or password', 'error')
+            flash('Invalid email or password', 'error')
     return render_template('login.html')
 
 
