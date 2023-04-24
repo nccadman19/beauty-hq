@@ -57,7 +57,9 @@ https://flask.palletsprojects.com/en/2.1.x/blueprints/
 
 Links to nav pages
 
+https://flask.palletsprojects.com/en/2.1.x/errorhandling/
 
+error handler
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)

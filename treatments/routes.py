@@ -18,6 +18,12 @@ def home():
     return render_template('index.html')
 
 
+# error handler
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
+
 # login template for beauticians
 @app.route('/login', methods=['GET', 'POST'])
 def login():
