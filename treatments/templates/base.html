@@ -22,7 +22,7 @@
         <nav class="transparent z-depth-0">
             <div class="nav-wrapper">
                 <ul class="right">
-                    <a href="{{ url_for('login') }}" class="btn waves-effect waves-light">Login</a>
+                  {% block header %}<a href="{{ url_for('login') }}" class="btn waves-effect waves-light">Login</a>{% endblock %}
                 </ul>
             </div>
         </nav>
@@ -42,17 +42,17 @@
             <nav class="transparent z-depth-0">
               <div class="nav-wrapper">
                 <ul class="hide-on-med-and-down right">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Clients</a></li>
-                  <li><a href="#">New Client</a></li>
+                  <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="{{ url_for('get_clients') }}">Clients</a></li>
+                  <li><a href="{{ url_for('new_client') }}">New Client</a></li>
                 </ul>
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
               </div>
             </nav>
             <ul class="sidenav" id="mobile-nav">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Clients</a></li>
-              <li><a href="#">New Client</a></li>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('get_clients') }}">Clients</a></li>
+              <li><a href="{{ url_for('new_client') }}">New Client</a></li>
             </ul>
           </div>
         </div>
