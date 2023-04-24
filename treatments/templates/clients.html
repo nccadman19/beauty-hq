@@ -19,7 +19,7 @@
                         <br><b>Brow:</b> {{ client.brows[0].style }}
                     {% endif %}
                     </p>
-                    <a href="{{ url_for('add_client', client_id=client.id) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ url_for('new_client', client_id=client.id) }}" class="btn btn-primary">Edit</a>
                 </div>
                 </div>
             </div>
