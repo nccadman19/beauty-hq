@@ -72,16 +72,18 @@ def new_client():
 @app.route('/clients', methods=['POST'])
 @login_required
 def create_client():
-    name = request.form.get('name')
-    email = request.form.get('email')
-    phone = request.form.get('phone')
-    client = Client(name=name, email=email, phone=phone)
-    db.session.add(client)
-    db.session.commit()
-    return render_template(
-        'clients.html',
-        message='Client created successfully.'
-    ), 201
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        client = Client(name=name, email=email, phone=phone)
+        db.session.add(client)
+        db.session.commit()
+        flash('Client added successfully!', 'success')
+        return redirect(url_for('get_clients'))
+    else:
+        clients = Client.query.all()
+        return render_template('clients.html', clients=clients)
 
 
 # template for getting all clients
