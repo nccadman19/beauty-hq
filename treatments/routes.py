@@ -1,8 +1,15 @@
 from flask import render_template, request, flash, redirect, url_for
 from treatments import app, db
 from treatments.models import Client, Treatment, Lash, Brow, Type, User
-from flask_login import login_user, logout_user, login_required
-from werkzeug.security import generate_password_hash
+from flask_login import login_user, logout_user, login_required, LoginManager
+from werkzeug.security import generate_password_hash, check_password_hash
+
+login_manager = LoginManager(app)
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 
 # homepage
@@ -20,7 +27,7 @@ def login():
         user = User.get_by_email(email)
         if user and check_password_hash(user.password, password):
             login_user(user)
-            return redirect(url_for('index'))
+            return render_template('clients.html')
         else:
             flash('Invalid email or password', 'error')
     return render_template('login.html')
@@ -40,12 +47,6 @@ def register():
         last_name = request.form.get('last_name')
         email = request.form.get('email')
         password = request.form.get('password')
-
-        # Check if last name is too long
-        if len(last_name) > 60:
-            flash('Last name is too long', 'danger')
-            return redirect(url_for('register'))
-
         hashed_password = generate_password_hash(password)
         user = User(
             first_name=first_name,
