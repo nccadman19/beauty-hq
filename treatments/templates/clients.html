@@ -1,30 +1,35 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">Clients</h3>
-
-<div class="row">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('add_category') }}" class="btn-large light-blue darken-2">
-            Add Category <i class="fas fa-plus-square right"></i>
-        </a>
-    </div>
-</div>
-
-<div class="row">
-    {% for category in categories %}
-    <div class="col s12 m6 l3">
-        <div class="card light-blue darken-4 center-align">
-            <div class="card-content white-text">
-                <span class="card-title">{{ category.category_name }}</span>
+<div>
+    <div class="container">
+        <h3 class="brown-text text-darken-4 center-align">Clients</h3>
+        <hr>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% for client in clients %}
+            <div class="col mb-3">
+                <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ client.name }}</h5>
+                    <p class="card-text">
+                    {% if client.lashes %}
+                        <b>Lash:</b> {{ client.lashes[0].style }}, {{ client.lashes[0].length }}"
+                    {% endif %}
+                    {% if client.brows %}
+                        <br><b>Brow:</b> {{ client.brows[0].style }}
+                    {% endif %}
+                    </p>
+                    <a href="{{ url_for('add_client', client_id=client.id) }}" class="btn btn-primary">Edit</a>
+                </div>
+                </div>
             </div>
-            <div class="card-action">
-                <a href="{{ url_for('edit_category', category_id=category.id) }}" class="btn green accent-4">Edit</a>
-                <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn red">Delete</a>
-            </div>
+            {% if loop.index % 3 == 0 %}
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
 </div>
-
 {% endblock %}
+
