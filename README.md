@@ -1,3 +1,65 @@
+[![Desktop-Wireframe]][desktop-wireframe]
+[![iPad-Wireframe]][ipad-wireframe]
+[![iPhone-Wireframe]][iphone-wireframe]
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[desktop-wireframe]: /treatments/static/img/readme/desktop-wireframe.jpg
+[ipad-wireframe]: /treatments/static/img/readme/ipad-wireframe.jpg
+[iphone-wireframe]: /treatments/static/img/readme/iphone-wireframe.jpg
+
+Business Stories:
+
+* As a web application provider, I want to provide a platform where small businesses can store and manage client profiles.
+* As a web application provider, I want to ensure that each small business has secure access to their client data and can only access their own data.
+* As a web application provider, I want to make it easy for small businesses to create, edit, locate, display, and delete client profiles.
+
+User Stories:
+
+* As a small business owner, I want to be able to create a new client profile so that I can record their information and treatment preferences.
+* As a small business owner, I want to be able to view and update a client's profile so that I can keep their information current and accurate.
+* As a small business owner, I want to be able to filter for a client's profile by name or other identifying information so that I can easily find their information.
+* As a small business owner, I want to be able to delete a client profile if it is no longer needed or if the information is incorrect.
+* As a user, I want to be able to log in to the web application with my credentials so that I can access my client profiles securely.
+* As a user, I want to be able to log out of the web application so that I can ensure the security of my client data.
+
+
+Things used 
+
+https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar
+
+Used to remove the shadow and line from the header
+
+https://materializecss.com/footer.html
+
+Template used 
+
+https://sentry.io/answers/auto-reloading-a-flask-application/
+
+Rerun application where I can see edits in html, had to keep ending and rerunning flask prior to this 
+
+https://unsplash.com/s/photos/lash-extensions
+
+Hero image
+
+https://www.youtube.com/watch?v=jaKMm9njcJc&list=PL4iRawDSyRvVd1V7A45YtAGzDk6ljVPm1
+
+Sqlalchemy tutorial 
+
+https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
+
+Login info 
+
+https://flask-login.readthedocs.io/en/latest/#login-example
+
+Login template html
+
+https://flask.palletsprojects.com/en/2.1.x/blueprints/
+
+Links to nav pages
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome Nic,
