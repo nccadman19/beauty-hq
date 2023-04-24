@@ -7,6 +7,30 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 
 
+class Client(db.Model):
+    # schema for the Client model
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    phone = db.Column(db.String(20), nullable=False)
+    lashes = db.relationship(
+        "Lash",
+        backref="client",
+        cascade="all, delete",
+        lazy=True
+    )
+    brows = db.relationship(
+        "Brow",
+        backref="client",
+        cascade="all, delete",
+        lazy=True
+    )
+
+    def __repr__(self):
+        # __repr__ to represent itself in the form of a string
+        return self.name
+
+
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     first_name = db.Column(db.VARCHAR(50), nullable=False)
@@ -61,30 +85,6 @@ class Type(db.Model):
         return "#{0} - Task: {1}".format(
             self.id, self.type_name
         )
-
-
-class Client(db.Model):
-    # schema for the Client model
-    id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), nullable=False)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    phone = db.Column(db.String(20), nullable=False)
-    lashes = db.relationship(
-        "Lash",
-        backref="client",
-        cascade="all, delete",
-        lazy=True
-    )
-    brows = db.relationship(
-        "Brow",
-        backref="client",
-        cascade="all, delete",
-        lazy=True
-    )
-
-    def __repr__(self):
-        # __repr__ to represent itself in the form of a string
-        return self.name
 
 
 class Lash(db.Model):
