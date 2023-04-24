@@ -66,3 +66,15 @@ footer {
 label.label-register {
     color: #53413a; 
 }
+
+.login {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    border-radius: 0.3rem;
+    background-color: rgba(233, 236, 239, 0.5);
+}
+
+label.label-login {
+    color: #53413a; 
+}

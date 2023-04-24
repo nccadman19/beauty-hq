@@ -1,10 +1,32 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="light-blue-text text-darken-4 center-align">Login</h3>
 
-<div class="row card-panel grey lighten-5">
-    <p>TEST</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="register">
+            <h3 class="brown-text text-darken-4 center-align">Login</h3>
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <label class="label-login" for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group">
+                    <label class="label-login" for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-info">{{ message }}</div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </form>
+            </div>
+        </div>
+    </div>
 </div>
-
 {% endblock %}
