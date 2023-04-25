@@ -1,4 +1,4 @@
-from flask import render_template, request, flash, redirect, url_for
+from flask import render_template, request, flash, redirect, url_for, session
 from treatments import app, db
 from treatments.models import Client, Treatment, Lash, Brow, Type, User
 from flask_login import login_user, logout_user, login_required, LoginManager
@@ -42,8 +42,10 @@ def login():
 @app.route('/logout')
 @login_required
 def logout():
+    # Clear Flask message flashing system
+    session.pop('_flashes', None)
     logout_user()
-    return render_template('index.html')
+    return redirect(url_for('home'))
 
 
 @app.route('/register', methods=['GET', 'POST'])

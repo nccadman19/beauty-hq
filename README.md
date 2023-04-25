@@ -61,6 +61,10 @@ https://flask.palletsprojects.com/en/2.1.x/errorhandling/
 
 error handler
 
+https://flask.palletsprojects.com/en/2.1.x/patterns/flashing/
+
+BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
