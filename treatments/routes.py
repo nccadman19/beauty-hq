@@ -33,7 +33,7 @@ def login():
         user = User.get_by_email(email)
         if user and check_password_hash(user.password, password):
             login_user(user)
-            return render_template('clients.html')
+            return redirect(url_for('get_clients'))
         else:
             flash('Invalid email or password', 'error')
     return render_template('login.html')
@@ -43,7 +43,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return render_template('index.html')
 
 
 @app.route('/register', methods=['GET', 'POST'])
