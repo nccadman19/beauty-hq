@@ -44,6 +44,15 @@ footer {
     background-color: #53413a;
 }
 
+/** background container **/
+.highlight {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    border-radius: 0.3rem;
+    background-color: rgba(233, 236, 239, 0.5);
+}
+
 /** index page **/
 
 .intro {
@@ -54,19 +63,13 @@ footer {
     background-color: rgba(233, 236, 239, 0.5);
     text-align: center;
 }
-/** register **/
-.register {
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    margin-top: 4rem;
-    border-radius: 0.3rem;
-    background-color: rgba(233, 236, 239, 0.5);
-}
 
+/** register **/
 label.label-register {
     color: #53413a; 
 }
 
+/** login page **/
 .login {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
@@ -77,4 +80,17 @@ label.label-register {
 
 label.label-login {
     color: #53413a; 
+}
+
+/** clients page **/
+@media only screen and (min-width: 601px) {
+    .container {
+        width:90%
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width:90%
+    }
 }
