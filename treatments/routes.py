@@ -1,6 +1,6 @@
 from flask import render_template, request, flash, redirect, url_for, session
 from treatments import app, db
-from treatments.models import Client, Treatment, Lash, Brow, Type, User
+from treatments.models import Client, Treatment, User
 from flask_login import login_user, logout_user, login_required, LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -103,39 +103,31 @@ def get_clients():
 
 
 # template for creating a new treatment
-@app.route('/treatments/new', methods=['GET'])
-@login_required
+# @app.route('/treatments/new', methods=['GET'])
+# @login_required
+# def new_treatment():
+#     return render_template('new_treatment.html')
+
+
+@app.route('/new_treatment', methods=['GET', 'POST'])
 def new_treatment():
-    return render_template('new_treatment.html')
-
-
-# endpoint for creating a new treatment
-@app.route('/treatments', methods=['POST'])
-@login_required
-def create_treatment():
-    treatment_name = request.form.get('treatment_name')
-    treatment = Treatment(treatment_name=treatment_name)
-    db.session.add(treatment)
-    db.session.commit()
-
-    # create lash treatment
-    lash_type = request.form.get('lash_type')
-    if lash_type:
-        lash = Lash(type_id=treatment.id, lash_type=lash_type)
-        db.session.add(lash)
-
-    # create brow treatment
-    brow_type = request.form.get('brow_type')
-    if brow_type:
-        brow = Brow(type_id=treatment.id, brow_type=brow_type)
-        db.session.add(brow)
-
-    db.session.commit()
-
-    return render_template(
-        'clients.html',
-        message='Treatment added successfully.'
-    ), 201
+    if request.method == 'POST':
+        treatment_type = request.form['type']
+        notes = request.form['notes']
+        if treatment_type == 'lashes':
+            lash_type = request.form['lash_type']
+            # create a new LashTreatment object with the given lash and notes
+        elif treatment_type == 'brows':
+            brow_type = request.form['brow_type']
+            # create a new BrowTreatment object with the given brow and notes
+        elif treatment_type == 'both':
+            lash_type = request.form['lash_type']
+            brow_type = request.form['brow_type']
+            # create a new LashBrowTreatment object with the given lash brow
+        # and notes. redirect to a page confirming the treatment was added
+        return redirect(url_for('get_clients'))
+    else:
+        return render_template('new_treatment.html')
 
 
 # template for getting all treatments
@@ -144,33 +136,3 @@ def create_treatment():
 def get_treatments():
     treatments = Treatment.query.all()
     return render_template('clients.html', treatments=treatments)
-
-
-# template for creating a new type
-@app.route('/types/new', methods=['GET'])
-@login_required
-def new_type():
-    return render_template('clients.html')
-
-
-# endpoint for creating a new type
-@app.route('/types', methods=['POST'])
-@login_required
-def create_type():
-    treatment_id = request.form.get('treatment_id')
-    type_name = request.form.get('type_name')
-    type = Type(treatment_id=treatment_id, type_name=type_name)
-    db.session.add(type)
-    db.session.commit()
-    return render_template(
-        'type_created.html',
-        message='Type created successfully.'
-    ), 201
-
-
-# template for getting all types
-@app.route('/types', methods=['GET'])
-@login_required
-def get_types():
-    types = Type.query.all()
-    return render_template('clients.html', types=types)
