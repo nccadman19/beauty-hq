@@ -91,4 +91,11 @@ class Treatment(db.Model):
     brow = db.relationship("Brow", backref="treatment", uselist=False)
 
     def __repr__(self):
-        return f"<Treatment {self.id}>"
+        treatment_type = ""
+        if self.type == "L":
+            treatment_type = "Lashes"
+        elif self.type == "B":
+            treatment_type = "Brows"
+        elif self.type == "BL":
+            treatment_type = "Both Lashes and Brows"
+        return f"<Treatment {self.id} ({treatment_type})>"

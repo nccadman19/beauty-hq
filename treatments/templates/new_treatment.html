@@ -10,60 +10,46 @@
 
 {% block content %}
 
-<div class="row">
-    <h4>Add a Treatment</h4>
-    <form method="POST" action="{{ url_for('create_treatment') }}">
-        <div class="input-field col s12">
-            <input id="treatment_name" name="treatment_name" type="text">
-            <label for="treatment_name">Treatment Name</label>
-        </div>
-        <div class="row">
-            <h5>Lash Type</h5>
-            <div class="input-field col s12">
-                <input id="lash_type" name="lash_type" type="text">
-                <label for="lash_type">Lash Type</label>
+<div class="container highlight" style="width: 100%">
+    <div class="row">
+        <h3 class="brown-text text-darken-4 center-align">Add Treatment</h3>
+        <hr>
+        <form method="POST" action="{{ url_for('new_treatment') }}">
+            <select id="treatment-type" name="type">
+                <option value="">Select Treatment Type</option>
+                <option value="L">Lashes</option>
+                <option value="B">Brows</option>
+                <option value="BL">Both</option>
+            </select>
+
+            <div id="lashes-options" style="display: none;">
+                <h4 class="brown-text text-darken-4 left-align">Lashes Options</h4>
+                <select id="lash-type" name="lash_type">
+                    <option value="">Select Lash Type</option>
+                    <option value="L1">Classic</option>
+                    <option value="L2">Hybrid</option>
+                    <option value="L3">Wispy</option>
+                </select>
+                <textarea id="notes" name="notes" placeholder="Add Notes"></textarea>
             </div>
-        </div>
-        <div class="row">
-            <h5>Brow Type</h5>
-            <div class="input-field col s12">
-                <input id="brow_type" name="brow_type" type="text">
-                <label for="brow_type">Brow Type</label>
+
+            <div id="brows-options" style="display: none;">
+                <h4 class="brown-text text-darken-4 left-align">Brow Options</h4>
+                    <select id="brow-type" name="brow_type">
+                    <option value="">Select Brow Type</option>
+                    <option value="BW">Brow Wax & Tint</option>
+                    <option value="BL">Brow lamination</option>
+                </select>
+                <textarea id="comments" name="notes" placeholder="Add Comments"></textarea>
             </div>
-        </div>
-        <div class="input-field col s12">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Add Treatment
-            </button>
-        </div>
-    </form>
+
+            <div id="both-options" style="display: none;">
+            </div>
+
+            <button id="add-treatment-btn" style="display: none;">Add Treatment</button>
+            <button type="submit">Add Treatment</button>
+        </form>      
+    </div>
 </div>
-
-<!-- # endpoint for creating a new treatment
-@app.route('/treatments', methods=['POST'])
-@login_required
-def create_treatment():
-    treatment_name = request.form.get('treatment_name')
-    treatment = Treatment(treatment_name=treatment_name)
-    db.session.add(treatment)
-    db.session.commit()
-
-    # create lash treatment
-    lash_type = request.form.get('lash_type')
-    if lash_type:
-        lash = Lash(type_id=treatment.id, lash_type=lash_type)
-        db.session.add(lash)
-
-    # create brow treatment
-    brow_type = request.form.get('brow_type')
-    if brow_type:
-        brow = Brow(type_id=treatment.id, brow_type=brow_type)
-        db.session.add(brow)
-
-    db.session.commit()
-
-    return render_template(
-        'clients.html',
-        message='Treatment added successfully.'
-    ), 201 -->
 
 {% endblock %}

@@ -18,20 +18,22 @@
         <div class="col s12 m6 l4">
             <div class="card">
                 <div class="card-content">
-                    <span class="card-title">{{ client.name }}</span>
-                    <p>
-                        {% if client.lashes %}
-                        <b>Lash:</b> {{ client.lashes[0].style }}, {{ client.lashes[0].length }}"
-                        {% endif %}
-                        {% if client.brows %}
-                        <br><b>Brow:</b> {{ client.brows[0].style }}
-                        {% endif %}
-                    </p>
+                    <span class="card-title">{{ client.name }}</span> 
+                    {% for treatment in client.lashes %}
+                        <p>Lash Treatment Type: {{ treatment.type }}</p>
+                        <p>Lash Treatment Notes: {{ treatment.notes }}</p>
+                        <p>Lash Type: {{ treatment.lash_type }}</p>
+                    {% endfor %}
+                    {% for treatment in client.brows %}
+                        <p>Brow Treatment Type: {{ treatment.type }}</p>
+                        <p>Brow Treatment Notes: {{ treatment.notes }}</p>
+                        <p>Brow Type: {{ treatment.brow_type }}</p>
+                    {% endfor %}
                 </div>
                 <div class="row center-align">
                     <div class="card-action col offset-s3">
                     <a href="{{ url_for('new_client', client_id=client.id) }}" class="btn">Edit</a>
-                    <a href="{{ url_for('new_treatment') }}" class="btn">Add Treatment</a>
+                    <a href="{{ url_for('new_treatment', client_id=client.id) }}" class="btn">Add Treatment</a>
                     </div>
                 </div>
             </div>

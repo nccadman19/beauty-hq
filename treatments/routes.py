@@ -103,12 +103,6 @@ def get_clients():
 
 
 # template for creating a new treatment
-# @app.route('/treatments/new', methods=['GET'])
-# @login_required
-# def new_treatment():
-#     return render_template('new_treatment.html')
-
-
 @app.route('/new_treatment', methods=['GET', 'POST'])
 def new_treatment():
     if request.method == 'POST':
