@@ -64,6 +64,7 @@ error handler
 https://flask.palletsprojects.com/en/2.1.x/patterns/flashing/
 
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
+BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
