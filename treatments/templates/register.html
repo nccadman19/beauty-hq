@@ -1,5 +1,13 @@
 {% extends "base.html" %}
-{% block header %} <a href="{{ url_for('login') }}" class="btn waves-effect waves-light">Login</a>{% endblock %}
+
+{% block header %}
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('logout') }}" class="btn waves-effect waves-light">Logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}" class="btn waves-effect waves-light">Login</a>
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 
 <div class="highlight">
