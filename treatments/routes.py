@@ -93,9 +93,6 @@ def create_client():
         db.session.commit()
         flash('Client added successfully!', 'success')
         return redirect(url_for('get_clients'))
-    else:
-        clients = Client.query.all()
-        return render_template('clients.html', clients=clients)
 
 
 # template for getting all clients
@@ -104,6 +101,13 @@ def create_client():
 def get_clients():
     clients = Client.query.all()
     return render_template('clients.html', clients=clients)
+
+
+@app.route('/client/<int:client_id>')
+@login_required
+def client(client_id):
+    client = Client.query.get_or_404(client_id)
+    return render_template('client.html', client=client)
 
 
 # template for creating a new treatment
