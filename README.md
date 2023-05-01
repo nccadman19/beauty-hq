@@ -69,6 +69,7 @@ https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-
 
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
 BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
+BUG: database not loading to run on website, added code to route line 7 to fix error
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
