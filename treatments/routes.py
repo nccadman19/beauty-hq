@@ -4,6 +4,10 @@ from treatments.models import Client, Treatment, User
 from flask_login import login_user, logout_user, login_required, LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
 
+with app.app_context():
+    db.create_all()
+
+
 login_manager = LoginManager(app)
 
 
