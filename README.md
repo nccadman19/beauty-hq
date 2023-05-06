@@ -75,6 +75,10 @@ updating the databse
 
 https://realpython.com/flask-by-example-updating-the-ui/
 
+deleting user
+
+https://materializecss.com/modals.html
+
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
 BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
 BUG: database not loading to run on website, added code to route line 7 to fix error
