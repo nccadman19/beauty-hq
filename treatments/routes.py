@@ -73,7 +73,7 @@ def register():
     return render_template('register.html')
 
 
-# template for creating a new client
+# creating a new client
 @app.route('/clients/new', methods=['GET'])
 @login_required
 def new_client():
@@ -107,7 +107,7 @@ def create_client():
         return redirect(url_for('get_all_clients'))
 
 
-# template for getting all clients
+# get all clients
 @app.route('/clients', methods=['GET'])
 @login_required
 def get_all_clients():
@@ -115,9 +115,27 @@ def get_all_clients():
     return render_template('clients.html', clients=clients)
 
 
-# template for getting a specific client
+# get a specific client
 @app.route('/client/<int:client_id>')
 @login_required
-def get_client(client_id):
+def edit_client(client_id):
     client = Client.query.get(client_id)
-    return render_template('client.html', client=client)
+    return render_template('edit_client.html', client=client)
+
+
+# update client information if changed
+@app.route('/client/<int:client_id>/update', methods=['POST'])
+@login_required
+def update_client(client_id):
+    client = Client.query.get(client_id)
+    if client:
+        client.name = request.form['name']
+        client.email = request.form['email']
+        client.phone = request.form['phone']
+        client.lash_type = request.form.get('lash_type')
+        client.lash_notes = request.form.get('lash_notes')
+        client.brow_type = request.form.get('brow_type')
+        client.brow_notes = request.form.get('brow_notes')
+        db.session.commit()
+        flash('Client information updated successfully!', 'success')
+    return redirect(url_for('get_all_clients', client_id=client_id))
