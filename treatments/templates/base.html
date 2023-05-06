@@ -43,7 +43,7 @@
               <div class="nav-wrapper">
                 <ul class="hide-on-med-and-down right">
                   <li><a href="{{ url_for('home') }}">Home</a></li>
-                  <li><a href="{{ url_for('get_clients') }}">Clients</a></li>
+                  <li><a href="{{ url_for('get_all_clients') }}">Clients</a></li>
                   <li><a href="{{ url_for('new_client') }}">New Client</a></li>
                 </ul>
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
@@ -51,7 +51,7 @@
             </nav>
             <ul class="sidenav" id="mobile-nav">
               <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('get_clients') }}">Clients</a></li>
+              <li><a href="{{ url_for('get_all_clients') }}">Clients</a></li>
               <li><a href="{{ url_for('new_client') }}">New Client</a></li>
             </ul>
           </div>

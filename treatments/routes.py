@@ -1,6 +1,6 @@
 from flask import render_template, request, flash, redirect, url_for, session
 from treatments import app, db
-from treatments.models import Client, Treatment, User
+from treatments.models import Client, User
 from flask_login import login_user, logout_user, login_required, LoginManager
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -37,7 +37,7 @@ def login():
         user = User.get_by_email(email)
         if user and check_password_hash(user.password, password):
             login_user(user)
-            return redirect(url_for('get_clients'))
+            return redirect(url_for('get_all_clients'))
         else:
             flash('Invalid email or password', 'error')
     return render_template('login.html')
@@ -88,53 +88,36 @@ def create_client():
         name = request.form['name']
         email = request.form['email']
         phone = request.form['phone']
+        lash_type = request.form.get('lash_type')
+        lash_notes = request.form.get('lash_notes')
+        brow_type = request.form.get('brow_type')
+        brow_notes = request.form.get('brow_notes')
+
         client = Client(name=name, email=email, phone=phone)
+        client.lash_type = lash_type
+        client.lash_notes = lash_notes
+        client.brow_type = brow_type
+        client.brow_notes = brow_notes
+
         db.session.add(client)
         db.session.commit()
-        flash('Client added successfully!', 'success')
-        return redirect(url_for('get_clients'))
+
+        flash('Client created successfully.', 'success')
+
+        return redirect(url_for('get_all_clients'))
 
 
 # template for getting all clients
 @app.route('/clients', methods=['GET'])
 @login_required
-def get_clients():
+def get_all_clients():
     clients = Client.query.all()
     return render_template('clients.html', clients=clients)
 
 
+# template for getting a specific client
 @app.route('/client/<int:client_id>')
 @login_required
-def client(client_id):
-    client = Client.query.get_or_404(client_id)
+def get_client(client_id):
+    client = Client.query.get(client_id)
     return render_template('client.html', client=client)
-
-
-# template for creating a new treatment
-@app.route('/new_treatment', methods=['GET', 'POST'])
-def new_treatment():
-    if request.method == 'POST':
-        treatment_type = request.form['type']
-        notes = request.form['notes']
-        if treatment_type == 'lashes':
-            lash_type = request.form['lash_type']
-            # create a new LashTreatment object with the given lash and notes
-        elif treatment_type == 'brows':
-            brow_type = request.form['brow_type']
-            # create a new BrowTreatment object with the given brow and notes
-        elif treatment_type == 'both':
-            lash_type = request.form['lash_type']
-            brow_type = request.form['brow_type']
-            # create a new LashBrowTreatment object with the given lash brow
-        # and notes. redirect to a page confirming the treatment was added
-        return redirect(url_for('get_clients'))
-    else:
-        return render_template('new_treatment.html')
-
-
-# template for getting all treatments
-@app.route('/treatments', methods=['GET'])
-@login_required
-def get_treatments():
-    treatments = Treatment.query.all()
-    return render_template('clients.html', treatments=treatments)
