@@ -37,14 +37,6 @@ footer {
     height: 12vh; 
 }
 
-.btn {
-    background-color: #8d6e63;
-}
-
-.btn:hover {
-    background-color: #53413a;
-}
-
 /** background container **/
 .highlight {
     padding: 2rem 1rem;
@@ -57,12 +49,32 @@ footer {
 /** index page **/
 
 .intro {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.btn {
+    background-color: #8d6e63;
+}
+
+.btn:hover {
+    background-color: #53413a;
+}
+
+.hero-text {
+    font-family: 'Bodoni Moda', serif;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #53413a;
+}
+
+.intro-p {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
-    margin-top: 8rem;
     border-radius: 0.3rem;
-    background-color: rgba(233, 236, 239, 0.5);
-    text-align: center;
+    background-color: rgba(233, 236, 239, 0.599);
+    color: #53413a;;
 }
 
 /** register **/
