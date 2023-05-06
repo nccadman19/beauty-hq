@@ -139,3 +139,15 @@ def update_client(client_id):
         db.session.commit()
         flash('Client information updated successfully!', 'success')
     return redirect(url_for('get_all_clients', client_id=client_id))
+
+
+# deleting client from database
+@app.route('/client/<int:client_id>/delete', methods=['POST'])
+@login_required
+def delete_client(client_id):
+    client = Client.query.get(client_id)
+    if client:
+        db.session.delete(client)
+        db.session.commit()
+        flash('Client deleted successfully!', 'success')
+    return redirect(url_for('get_all_clients'))
