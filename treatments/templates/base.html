@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&family=Raleway:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Glam Files</title>
 </head>
@@ -34,12 +34,10 @@
         {% endblock %}
     </main>
 
-    <footer class="page-footer brown lighten-1 smaller-footer center-align" style="position: fixed; bottom: 0; width: 100%;">
+    <footer class="page-footer brown darken-1 smaller-footer center-align" style="position: fixed; bottom: 0; width: 100%;">
         <div class="container">
           <div class="row valign-wrapper">
-            <div class="logo">
-              <img src="#" alt="Glam Files Logo">
-            </div>
+            <img class="logo" src="../static/img/logo.png" alt="Glam Files Logo">
             <nav class="transparent z-depth-0">
               <div class="nav-wrapper">
                 <ul class="hide-on-med-and-down right">
@@ -50,10 +48,10 @@
                 <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
               </div>
             </nav>
-            <ul class="sidenav" id="mobile-nav">
-              <li><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('get_all_clients') }}">Clients</a></li>
-              <li><a href="{{ url_for('new_client') }}">New Client</a></li>
+            <ul class="sidenav menu-list" id="mobile-nav">
+              <li><a href="{{ url_for('home') }}" class="sidenav-close">Home</a></li>
+              <li><a href="{{ url_for('get_all_clients') }}" class="sidenav-close">Clients</a></li>
+              <li><a href="{{ url_for('new_client') }}" class="sidenav-close">New Client</a></li>
             </ul>
           </div>
         </div>
