@@ -3,7 +3,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-image: url('/static/img/hero-index.jpg');
+    background-image: url('/static/img/hero-image.jpg');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -17,7 +17,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('/static/img/hero-index.jpg');
+    background-image: url('/static/img/hero-image.jpg');
     background-size: cover;
     background-position: center center;
     filter: blur(5px);
@@ -41,6 +41,10 @@ footer {
     justify-content: center;
     height: 12vh; 
     z-index: 1000;
+}
+
+.brown.darken-1 {
+    background-color: #5C4A56 !important;
 }
 
 .logo {
@@ -82,18 +86,20 @@ footer {
 }
 
 .btn {
-    background-color: #8d6e63;
+    background-color: #383433;
+    font-family: Raleway;
 }
 
 .btn:hover {
-    background-color: #53413a;
+    background-color: #C2FBEF;
+    color: #2F4C4F;
 }
 
 .hero-text {
-    font-family: 'Viaoda Libre', serif;
-    color: #ffffff;
-    font-weight: 400;
-    /* text-shadow: 2px 2px 8px #53413a; */
+    font-family: 'Baskerville', serif;
+    color: #C2FBEF;
+    text-shadow: 3px 3px 10px #2F4C4F;
+    padding-top: 2rem;
 }
 
 .intro-container {
@@ -101,16 +107,27 @@ footer {
 }
 
 .intro-p {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 0.3rem;
-    color: #53413a;;
+    color: #383433;;
     font-family: Raleway;
 }
 
 /** register **/
 label.label-register {
-    color: #53413a; 
+    color: #383433; 
 }
+
+input:not([type]):focus:not([readonly]),input[type=text]:not(.browser-default):focus:not([readonly]),input[type=password]:not(.browser-default):focus:not([readonly]),input[type=email]:not(.browser-default):focus:not([readonly]),input[type=url]:not(.browser-default):focus:not([readonly]),input[type=time]:not(.browser-default):focus:not([readonly]),input[type=date]:not(.browser-default):focus:not([readonly]),input[type=datetime]:not(.browser-default):focus:not([readonly]),input[type=datetime-local]:not(.browser-default):focus:not([readonly]),input[type=tel]:not(.browser-default):focus:not([readonly]),input[type=number]:not(.browser-default):focus:not([readonly]),input[type=search]:not(.browser-default):focus:not([readonly]),textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #C2FBEF;
+    -webkit-box-shadow: 0 1px 0 0 #BBB5B2;
+    box-shadow: 0 1px 0 0 #2F4C4F;
+}
+
+input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-default):focus:not([readonly])+label,input[type=password]:not(.browser-default):focus:not([readonly])+label,input[type=email]:not(.browser-default):focus:not([readonly])+label,input[type=url]:not(.browser-default):focus:not([readonly])+label,input[type=time]:not(.browser-default):focus:not([readonly])+label,input[type=date]:not(.browser-default):focus:not([readonly])+label,input[type=datetime]:not(.browser-default):focus:not([readonly])+label,input[type=datetime-local]:not(.browser-default):focus:not([readonly])+label,input[type=tel]:not(.browser-default):focus:not([readonly])+label,input[type=number]:not(.browser-default):focus:not([readonly])+label,input[type=search]:not(.browser-default):focus:not([readonly])+label,textarea.materialize-textarea:focus:not([readonly])+label {
+    color: #383433;
+}
+
 
 /** login page **/
 .login {
@@ -119,10 +136,6 @@ label.label-register {
     margin-top: 4rem;
     border-radius: 0.3rem;
     background-color: rgba(233, 236, 239, 0.5);
-}
-
-label.label-login {
-    color: #53413a; 
 }
 
 /** clients page **/
@@ -152,17 +165,17 @@ label.label-login {
 
 /** new client **/ 
 .titles {
-    color: #6d4c41;
+    color: #2F4C4F;
     font-family: Raleway;
     font-size: 1rem;
 }
 
 .dropdown-content li>a, .dropdown-content li>span {
-    color: #53413a;
+    color: #2F4C4F;
 }
 
 .select-wrapper input.select-dropdown:focus {
-    border-bottom: 1px solid #6d4c41;
+    border-bottom: 1px solid #2F4C4F;
 }
 
 .select-wrapper {
@@ -173,15 +186,29 @@ h3 {
     font-family: Raleway;
 }
 
-.btn {
-    font-family: Raleway;
-}
-
 /** error **/
 .error {
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     margin-top: 4rem;
     border-radius: 0.3rem;
-    background-color: rgba(233, 236, 239, 0.5);
+    background-color: #bbb5b28d;
+}
+
+/** about us **/
+
+.about-heading {
+    color: #5C4A56;
+}
+
+.about-p {
+    border-radius: 0.3rem;
+    color: #383433;
+    font-family: Raleway;
+    font-size: large;
+}
+
+.about-li {
+    font-family: Raleway;
+    color: #383433;
 }
