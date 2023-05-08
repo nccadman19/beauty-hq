@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&family=Raleway:ital,wght@0,300;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Glam Files</title>
 </head>
@@ -42,6 +44,7 @@
               <div class="nav-wrapper">
                 <ul class="hide-on-med-and-down right">
                   <li><a href="{{ url_for('home') }}">Home</a></li>
+                  <li><a href="{{ url_for('about') }}">About Us</a></li>
                   <li><a href="{{ url_for('get_all_clients') }}">Clients</a></li>
                   <li><a href="{{ url_for('new_client') }}">New Client</a></li>
                 </ul>
@@ -50,6 +53,7 @@
             </nav>
             <ul class="sidenav menu-list" id="mobile-nav">
               <li><a href="{{ url_for('home') }}" class="sidenav-close">Home</a></li>
+              <li><a href="{{ url_for('about') }}" class="sidenav-close">About Us</a></li>
               <li><a href="{{ url_for('get_all_clients') }}" class="sidenav-close">Clients</a></li>
               <li><a href="{{ url_for('new_client') }}" class="sidenav-close">New Client</a></li>
             </ul>
