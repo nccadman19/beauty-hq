@@ -22,6 +22,12 @@ def home():
     return render_template('index.html')
 
 
+# about us 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
 # error handler
 @app.errorhandler(404)
 def page_not_found(error):
