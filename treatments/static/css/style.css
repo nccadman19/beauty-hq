@@ -29,12 +29,38 @@ main {
     flex: 1 0 auto;
 }
 
+.valign-wrapper {
+    font-family: Raleway;
+}
+
+/* footer */
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 12vh; 
+    z-index: 1000;
+}
+
+.logo {
+    height: 5rem;
+}
+
+@media only screen and (min-width: 601px) {
+    .logo {
+        height: 3rem;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .logo {
+        height: 3rem;
+    }
+}
+
+.sidenav-overlay {
+    display: none !important;
 }
 
 /** background container **/
@@ -43,7 +69,8 @@ footer {
     margin-bottom: 2rem;
     margin-top: 4rem;
     border-radius: 0.3rem;
-    background-color: rgba(233, 236, 239, 0.5);
+    background-color: rgba(233, 236, 239);
+    font-family: Raleway;
 }
 
 /** index page **/
@@ -63,18 +90,21 @@ footer {
 }
 
 .hero-text {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Viaoda Libre', serif;
     color: #ffffff;
-    font-weight: 700;
-    text-shadow: 2px 2px 8px #53413a;
+    font-weight: 400;
+    /* text-shadow: 2px 2px 8px #53413a; */
+}
+
+.intro-container {
+    background-color: rgba(233, 236, 239);
 }
 
 .intro-p {
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
     border-radius: 0.3rem;
-    background-color: rgba(233, 236, 239, 0.599);
     color: #53413a;;
+    font-family: Raleway;
 }
 
 /** register **/
@@ -98,12 +128,60 @@ label.label-login {
 /** clients page **/
 @media only screen and (min-width: 601px) {
     .container {
-        width:90%
+        width:90%;
     }
 }
 
 @media only screen and (min-width: 993px) {
     .container {
-        width:90%
+        width:90%;
     }
+}
+
+.col .row {
+    border-top: 1px solid rgba(160,160,160,0.2);
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.card .card-action {
+    border-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/** new client **/ 
+.titles {
+    color: #6d4c41;
+    font-family: Raleway;
+    font-size: 1rem;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #53413a;
+}
+
+.select-wrapper input.select-dropdown:focus {
+    border-bottom: 1px solid #6d4c41;
+}
+
+.select-wrapper {
+    font-family: Raleway;
+}
+
+h3 {
+    font-family: Raleway;
+}
+
+.btn {
+    font-family: Raleway;
+}
+
+/** error **/
+.error {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    border-radius: 0.3rem;
+    background-color: rgba(233, 236, 239, 0.5);
 }
