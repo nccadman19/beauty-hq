@@ -22,7 +22,7 @@ def home():
     return render_template('index.html')
 
 
-# about us 
+# about us
 @app.route('/about')
 def about():
     return render_template('about.html')
