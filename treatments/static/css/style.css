@@ -139,30 +139,47 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
 }
 
 /** clients page **/
+.client-list {
+    column-count: 3;
+    column-gap: 1em;
+}
+
+.client-card {
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 1em;
+    width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+    .client-list {
+        column-count: 1;
+    }
+}
+
 @media only screen and (min-width: 601px) {
     .container {
-        width:90%;
+        width: 90%;
+    }
+
+    .client-list {
+        column-count: 2;
     }
 }
 
 @media only screen and (min-width: 993px) {
     .container {
-        width:90%;
+        width: 90%;
+    }
+
+    .client-list {
+        column-count: 3;
     }
 }
 
-.col .row {
-    border-top: 1px solid rgba(160,160,160,0.2);
-    margin-right: 0;
-    margin-left: 0;
+.card {
+    border-radius: 5px;
 }
-
-.card .card-action {
-    border-top: 0;
-    margin-right: 0;
-    margin-left: 0;
-}
-
 /** new client **/ 
 .titles {
     color: #2F4C4F;

@@ -9,51 +9,53 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="container highlight" style="width: 100%">
-    <h3 class="brown-text text-darken-4 center-align">Clients</h3>
-    <hr>
-    <div class="row">
-       {% for client in clients %}
-            <div class="col s12 m6 l4">
-                <div class="card">
-                    <div class="card-content">
-                        <span class="card-title">{{ client.name }}</span>  
-                        <p>
-                            <strong>Email:</strong> {{ client.email }}<br>
-                            <strong>Phone:</strong> {{ client.phone }}<br>
-                            <strong>Lash Type:</strong> {{ client.formatted_lash_type }}<br>
-                            <strong>Lash Notes:</strong> {{ client.lash_notes }}<br>
-                            <strong>Brow Type:</strong> {{ client.formatted_brow_type }}<br>
-                            <strong>Brow Notes:</strong> {{ client.brow_notes }}<br>
-                        </p>
-                    </div>
-                    <div class="row center-align">
-                        <div class="card-action col">
-                            <a href="{{ url_for('edit_client', client_id=client.id) }}" class="btn">Edit</a>
-                            <button data-target="delete-modal-{{ client.id }}" class="btn modal-trigger red" onclick="document.getElementById('delete-form').action='/client/{{ client.id }}/delete'">Delete</button>
+    <div class="container highlight card-container" style="width: 100%">
+        <h3 class="brown-text text-darken-4 center-align">Clients</h3>
+        <hr>
+        <div class="client-list">
+           {% for client in clients %}
+                <div class="client-card">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">{{ client.name }}</span>  
+                            <p>
+                                <strong>Email:</strong> {{ client.email }}<br>
+                                <strong>Phone:</strong> {{ client.phone }}<br>
+                                <strong>Lash Type:</strong> {{ client.formatted_lash_type }}<br>
+                                <strong>Lash Notes:</strong> {{ client.lash_notes }}<br>
+                                <strong>Brow Type:</strong> {{ client.formatted_brow_type }}<br>
+                                <strong>Brow Notes:</strong> {{ client.brow_notes }}<br>
+                            </p>
+                        </div>
+                        <div class="center-align">
+                            <div class="card-action">
+                                <a href="{{ url_for('edit_client', client_id=client.id) }}" class="btn">Edit</a>
+                                <button data-target="delete-modal-{{ client.id }}" class="btn modal-trigger red" onclick="document.getElementById('delete-form').action='/client/{{ client.id }}/delete'">Delete</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    {% block footer %} 
+    {% for client in clients %}
+    <!-- Modal Structure -->
+        <div id="delete-modal-{{ client.id }}" class="modal">
+            <div class="modal-content">
+                <h4>Delete Client</h4>
+                <p>Are you sure you want to delete {{ client.name }}?</p>
             </div>
-        {% endfor %}
-        {% block footer %} 
-        {% for client in clients %}
-        <!-- Modal Structure -->
-            <div id="delete-modal-{{ client.id }}" class="modal">
-                <div class="modal-content">
-                    <h4>Delete Client</h4>
-                    <p>Are you sure you want to delete {{ client.name }}?</p>
-                </div>
-                <div class="modal-footer">
-                    <form action="{{ url_for('delete_client', client_id=client.id) }}" method="POST">
-                        <button class="modal-close waves-effect waves-green btn-flat" type="submit">Delete</button>
-                    </form>
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
-                </div>
+            <div class="modal-footer">
+                <form action="{{ url_for('delete_client', client_id=client.id) }}" method="POST">
+                    <button class="modal-close waves-effect waves-green btn-flat" type="submit">Delete</button>
+                </form>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
             </div>
-        {% endfor %}
-        {% endblock %} 
+        </div>
+    {% endfor %}
+    {% endblock %} 
 
 {% endblock %}
 
