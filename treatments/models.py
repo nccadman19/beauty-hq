@@ -36,7 +36,7 @@ class Client(db.Model):
     @property
     def formatted_brow_type(self):
         if self.brow_type == 'brow_tint':
-            return 'Brow & Tint'
+            return 'Wax & Tint'
         elif self.brow_type == 'lamination':
             return 'Lamination'
         else:
