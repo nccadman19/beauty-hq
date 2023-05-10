@@ -1,6 +1,6 @@
 from treatments import db
 from flask import Flask
-from flask_login import LoginManager, UserMixin
+from flask_login import LoginManager, UserMixin, current_user
 
 app = Flask(__name__)
 login_manager = LoginManager()
@@ -17,6 +17,7 @@ class Client(db.Model):
     lash_notes = db.Column(db.Text, nullable=True)
     brow_type = db.Column(db.String(20), nullable=True)
     brow_notes = db.Column(db.Text, nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
         # __repr__ to represent itself in the form of a string
@@ -49,6 +50,10 @@ class User(UserMixin, db.Model):
     last_name = db.Column(db.VARCHAR(50), nullable=False)
     email = db.Column(db.VARCHAR(120), unique=True, nullable=False)
     password = db.Column(db.VARCHAR(300), nullable=False)
+    clients = db.relationship(
+        'Client',
+        backref=db.backref('user', lazy=True)
+        )
 
     @staticmethod
     def get_by_email(email):

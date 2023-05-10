@@ -1,7 +1,13 @@
 from flask import render_template, request, flash, redirect, url_for, session
 from treatments import app, db
 from treatments.models import Client, User
-from flask_login import login_user, logout_user, login_required, LoginManager
+from flask_login import (
+    login_user,
+    logout_user,
+    login_required,
+    LoginManager,
+    current_user
+)
 from werkzeug.security import generate_password_hash, check_password_hash
 
 with app.app_context():
@@ -99,11 +105,14 @@ def create_client():
         brow_type = request.form.get('brow_type')
         brow_notes = request.form.get('brow_notes')
 
+        user = User.query.filter_by(id=current_user.id).first()
+
         client = Client(name=name, email=email, phone=phone)
         client.lash_type = lash_type
         client.lash_notes = lash_notes
         client.brow_type = brow_type
         client.brow_notes = brow_notes
+        client.user = user
 
         db.session.add(client)
         db.session.commit()
@@ -117,7 +126,8 @@ def create_client():
 @app.route('/clients', methods=['GET'])
 @login_required
 def get_all_clients():
-    clients = Client.query.all()
+    user = User.query.filter_by(id=current_user.id).first()
+    clients = user.clients
     return render_template('clients.html', clients=clients)
 
 
