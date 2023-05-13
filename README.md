@@ -1,27 +1,125 @@
+# Beau Belle | Nail Salon
+
+## Welsh Nail Salon | Situated in Newport Wales
+-------
+[![VisitWebsite][website-shield]][website-url]&nbsp;&nbsp;
+[![Issues][issues-shield]][issues-url]&nbsp;&nbsp;
+[![ClosedIssues][closed-shield]][closed-url]&nbsp;&nbsp;
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+## Table of Contents 
+- [**Project Goals**](#project-goals)
+  - [Business Goals](#business-goals)
+  - [User Goals](#user-goals)
+- [**User Experience UX**](#user-experience-ux)
+  - [Strategy](#strategy)
+  - [Wireframes](#wireframes)
+  - [Surface](#surface)
+  - [Colormind](#colormind)
+- [**Features**](#features)
+    - [NavBar & Footer](#navbar-&-footer)
+    - [Home](#home)
+    - [Gallery](#gallery)
+    - [Pricing](#pricing)
+    - [Quiz](#quiz)
+    - [Quiz Layout](#quiz-layout)
+    - [Contact Us](#contact-us)
+- [**Testing**](#testing)
+    - [Responsiveness](#responsiveness)
+    - [Functionality Testing](#functionality-testing)
+    - [Compatibility Testing](#compatibility-testing)
+    - [Resolved Bugs](#resolved-bugs)
+    - [Unresolved Bugs](#unresolved-bugs)
+    - [Contact Us](#contact-us)
+- [**Usability Testing**](#usability-testing)
+    - [Navigation](#navigation)
+    - [Accessibility](#accessibility)
+- [**Github Deployment**](#github-deployment)
+    - [Preparation](#preparation)
+    - [Instructions](#instructions)
+    - [Installation](#installation)
+- [**Acknowledgements**](#acknowledgements)
+    - [Built With](#built-with)
+    - [Media](#media)
+    - [Installation](#installation)
+    - [Credits](#credits)
+
+# Project Goals
+
+## Business Goals
+
+1. Streamline client management and record-keeping processes for the beautician
+2. Improve the overall efficiency and organization of the beautician's business
+3. Increase client retention by providing a more personalized and streamlined experience
+4. Boost profitability by identifying trends and patterns in client behavior and preferences
+
+
+## User Goals
+
+1. Easily access and update client information in one central location
+2. View past client interactions and appointment history
+3. Receive alerts and reminders for upcoming appointments and important client events
+4. Analyze client data to identify areas for improvement and growth in the business
+
+[Back to top](#table-of-contents)
+
+# User Experience UX
+
+## Strategy
+
+Considering the core UX principles I first started to think about the strategy for this website and defined who the target users would be and what features/technologies they would want.
+
+Glam Files target users are:
+
+Aged 18-60 primarily women 
+
+What these users would be looking for:
+
+Streamlined and easy-to-use client management system
+
+Access to client information in one central location
+
+Ability to edit and update client information if there are any changes
+
+Be able to delete a client profile if it is no longer needed or if the information is incorrect
+
+The ability to log in to the web application with my credentials so that I can access my client profiles securely
+
+To be able to log out of the web application so that I can ensure the security of my client data
+
+## Wireframes
+
+Wireframes
+
 [![Desktop-Wireframe]][desktop-wireframe]
 [![iPad-Wireframe]][ipad-wireframe]
 [![iPhone-Wireframe]][iphone-wireframe]
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[desktop-wireframe]: /treatments/static/img/readme/desktop-wireframe.jpg
-[ipad-wireframe]: /treatments/static/img/readme/ipad-wireframe.jpg
-[iphone-wireframe]: /treatments/static/img/readme/iphone-wireframe.jpg
+## Surface
 
-Business Stories:
+I chose a colour palette based around the hero image, I put the image into photoshop and copied a few of the colours inside of the image. I wanted this to be reflected on the website. I paired these colours with a dark slate grey and a lighter blue to contrast the more muted colours in the image. 
 
-* As a web application provider, I want to provide a platform where small businesses can store and manage client profiles.
-* As a web application provider, I want to ensure that each small business has secure access to their client data and can only access their own data.
-* As a web application provider, I want to make it easy for small businesses to create, edit, locate, display, and delete client profiles.
+## Coolors
 
-User Stories:
+Using the coolors palette on the image I selected the colours from this palette and also a darker and lighter shade of contrasting colours to create a balances palette. 
 
-* As a small business owner, I want to be able to create a new client profile so that I can record their information and treatment preferences.
-* As a small business owner, I want to be able to view and update a client's profile so that I can keep their information current and accurate.
-* As a small business owner, I want to be able to filter for a client's profile by name or other identifying information so that I can easily find their information.
-* As a small business owner, I want to be able to delete a client profile if it is no longer needed or if the information is incorrect.
-* As a user, I want to be able to log in to the web application with my credentials so that I can access my client profiles securely.
-* As a user, I want to be able to log out of the web application so that I can ensure the security of my client data.
+![Coolors](/treatments/static/img/readme/coolors.png)
 
+I used Google fonts 'Libre Baskerville' and 'Raleway'. I used the Libre font to make the initial text stand out from the regular font on the site. I then used 'Raleway' as I thought it was very easy to read and looks professional.
+
+# Features
+
+This is a fully responsive website that was designed mobile-first as this is the most likely way it will be viewed; the website is divided into the 9 pages, 6 of which have buttoned links on the index page. The edit client page is not available until the user is logged into the website. There is also a 404 page for when someone ends up on an incorrect page. All of the headings use the font Raleway and the body too, this consistency has been used across the website to create a coherent design. 
+
+## Navbar & Footer
+
+The navbar is comprised of a logo and navigation links to the other pages on the site. You can see how the navbar turns into a toggled dropdown menu when viewed on mobile. 
+
+![Navbar Mockup](assets/images/readme/mockup-iphone.png)
+
+## Home
+
+[Back to top](#table-of-contents)
 
 Things used 
 
@@ -126,73 +224,9 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ------
 
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+<!-- MARKDOWN LINKS & IMAGES -->
+[desktop-wireframe]: /treatments/static/img/readme/desktop-wireframe.jpg
+[ipad-wireframe]: /treatments/static/img/readme/ipad-wireframe.jpg
+[iphone-wireframe]: /treatments/static/img/readme/iphone-wireframe.jpg
+[website-shield]: https://img.shields.io/badge/VISIT%20WEBSITE-HERE-green?style=for-the-badge&logo=closed
+[website-url]: https://nccadman19.github.io/beau-belle/
