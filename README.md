@@ -113,7 +113,7 @@ This is a fully responsive website that was designed mobile-first as this is the
 
 ## Navbar & Footer
 
-The navbar is comprised of a logo and navigation links to the other pages on the site. You can see how the navbar turns into a toggled dropdown menu when viewed on mobile. 
+The navbar is comprised of login button for users to login to their client database. The footer consists of the logo and menu items, including a home, about us, client and new client button. You can see how the footer turns into a toggled dropdown menu when viewed on mobile. 
 
 ![Navbar Mockup](assets/images/readme/mockup-iphone.png)
 
