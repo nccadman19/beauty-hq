@@ -87,9 +87,13 @@ def register():
 
 # creating a new client
 @app.route('/clients/new', methods=['GET'])
-@login_required
 def new_client():
-    return render_template('add_client.html')
+    if current_user.is_authenticated:
+        user = User.query.filter_by(id=current_user.id).first()
+        clients = user.clients
+        return render_template('add_client.html', clients=clients)
+    else:
+        return redirect(url_for('register'))
 
 
 # API endpoint for creating a new client
@@ -124,11 +128,13 @@ def create_client():
 
 # get all clients
 @app.route('/clients', methods=['GET'])
-@login_required
 def get_all_clients():
-    user = User.query.filter_by(id=current_user.id).first()
-    clients = user.clients
-    return render_template('clients.html', clients=clients)
+    if current_user.is_authenticated:
+        user = User.query.filter_by(id=current_user.id).first()
+        clients = user.clients
+        return render_template('clients.html', clients=clients)
+    else:
+        return redirect(url_for('register'))
 
 
 # get a specific client
