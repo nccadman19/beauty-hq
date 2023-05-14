@@ -185,6 +185,10 @@ BUG: logout message issue, taking to rendered clients.html and not reidrecting t
 BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
 BUG: database not loading to run on website, added code to route line 7 to fix error
 
+Toasts
+
+https://materializecss.com/toasts.html
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
