@@ -120,10 +120,17 @@ def create_client():
 
         db.session.add(client)
         db.session.commit()
+        toast_success = {
+            'toast': 'Client created successfully!',
+            'class': 'green'
+        }
 
-        flash('Client created successfully.', 'success')
-
-        return redirect(url_for('get_all_clients'))
+        clients = user.clients
+        return render_template(
+            'clients.html',
+            clients=clients,
+            toast_success=toast_success
+        )
 
 
 # get all clients
