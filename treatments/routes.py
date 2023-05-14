@@ -86,6 +86,7 @@ def register():
 
 # creating a new client
 @app.route('/clients/new', methods=['GET'])
+@login_required
 def new_client():
     if current_user.is_authenticated:
         user = User.query.filter_by(id=current_user.id).first()
@@ -108,7 +109,7 @@ def create_client():
         brow_type = request.form.get('brow_type')
         brow_notes = request.form.get('brow_notes')
 
-        user = User.query.filter_by(id=current_user.id).first()
+        user_id = current_user.id
 
         # Check if a client with the same email already exists
         existing_client = Client.query.filter_by(email=email).first()
