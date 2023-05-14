@@ -53,7 +53,7 @@ class User(UserMixin, db.Model):
     clients = db.relationship(
         'Client',
         backref=db.backref('user', lazy=True)
-        )
+    )
 
     @staticmethod
     def get_by_email(email):
