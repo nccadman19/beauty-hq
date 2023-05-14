@@ -109,10 +109,12 @@ def create_client():
         brow_type = request.form.get('brow_type')
         brow_notes = request.form.get('brow_notes')
 
-        user_id = current_user.id
+        user = User.query.filter_by(id=current_user.id).first()
 
         # Check if a client with the same email already exists
-        existing_client = Client.query.filter_by(email=email).first()
+        existing_client = Client.query.filter_by(
+            email=email,
+            user_id=current_user.id).first()
         if existing_client:
             toast_success = {
                 'toast': 'A client with this email already exists!',
