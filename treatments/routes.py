@@ -80,7 +80,6 @@ def register():
         )
         db.session.add(user)
         db.session.commit()
-        flash('Account created successfully', 'success')
         return redirect(url_for('login'))
     return render_template('register.html')
 
@@ -110,6 +109,20 @@ def create_client():
         brow_notes = request.form.get('brow_notes')
 
         user = User.query.filter_by(id=current_user.id).first()
+
+        # Check if a client with the same email already exists
+        existing_client = Client.query.filter_by(email=email).first()
+        if existing_client:
+            toast_success = {
+                'toast': 'A client with this email already exists!',
+                'class': 'red'
+            }
+            clients = user.clients
+            return render_template(
+                'clients.html',
+                clients=clients,
+                toast_success=toast_success
+            )
 
         client = Client(name=name, email=email, phone=phone)
         client.lash_type = lash_type
