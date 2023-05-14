@@ -132,7 +132,11 @@ def get_all_clients():
     if current_user.is_authenticated:
         user = User.query.filter_by(id=current_user.id).first()
         clients = user.clients
-        return render_template('clients.html', clients=clients)
+        toast_success = request.args.get('toast_success')
+        return render_template(
+            'clients.html',
+            clients=clients,
+            toast_success=toast_success)
     else:
         return redirect(url_for('register'))
 
@@ -171,5 +175,17 @@ def delete_client(client_id):
     if client:
         db.session.delete(client)
         db.session.commit()
-        flash('Client deleted successfully!', 'success')
-    return redirect(url_for('get_all_clients'))
+        toast_success = {
+            'toast': 'Client deleted successfully!',
+            'class': 'green'
+        }
+    else:
+        toast_success = {'toast': 'Client not found', 'class': 'red'}
+    # fetch the updated list of clients
+    user = User.query.filter_by(id=current_user.id).first()
+    clients = user.clients
+    return render_template(
+        'clients.html',
+        clients=clients,
+        toast_success=toast_success
+    )
