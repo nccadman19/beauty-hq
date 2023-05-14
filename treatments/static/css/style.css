@@ -113,6 +113,12 @@ footer {
     font-family: Raleway;
 }
 
+@media only screen and (min-width: 993px) {
+    .container {
+        width:90%;
+    }
+}
+
 /** register **/
 label.label-register {
     color: #383433; 
@@ -139,47 +145,11 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
 }
 
 /** clients page **/
-.client-list {
-    column-count: 3;
-    column-gap: 1em;
+.col .row {
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.client-card {
-    background-color: #eee;
-    display: inline-block;
-    margin: 0 0 1em;
-    width: 100%;
-}
-
-@media only screen and (min-width: 320px) {
-    .client-list {
-        column-count: 1;
-    }
-}
-
-@media only screen and (min-width: 601px) {
-    .container {
-        width: 90%;
-    }
-
-    .client-list {
-        column-count: 2;
-    }
-}
-
-@media only screen and (min-width: 993px) {
-    .container {
-        width: 90%;
-    }
-
-    .client-list {
-        column-count: 3;
-    }
-}
-
-.card {
-    border-radius: 5px;
-}
 /** new client **/ 
 .titles {
     color: #2F4C4F;
@@ -202,7 +172,7 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
 h3 {
     font-family: Raleway;
 }
-
+  
 /** error **/
 .error {
     padding: 2rem 1rem;
