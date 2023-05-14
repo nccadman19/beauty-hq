@@ -169,9 +169,20 @@ def update_client(client_id):
         client.lash_notes = request.form.get('lash_notes')
         client.brow_type = request.form.get('brow_type')
         client.brow_notes = request.form.get('brow_notes')
+
         db.session.commit()
-        flash('Client information updated successfully!', 'success')
-    return redirect(url_for('get_all_clients', client_id=client_id))
+        toast_success = {
+            'toast': 'Client updated successfully!',
+            'class': 'green'
+        }
+
+        user = User.query.filter_by(id=current_user.id).first()
+        clients = user.clients
+        return render_template(
+            'clients.html',
+            clients=clients,
+            toast_success=toast_success
+        )
 
 
 # deleting client from database
