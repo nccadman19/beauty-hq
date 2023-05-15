@@ -189,6 +189,11 @@ Toasts
 
 https://materializecss.com/toasts.html
 
+messages on crud function
+
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis
+
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
