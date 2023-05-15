@@ -184,6 +184,12 @@ https://w3bits.com/css-masonry/
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
 BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
 BUG: database not loading to run on website, added code to route line 7 to fix error
+BUG: favicon icon error 
+BUG: users could not add client email addresses with the same email as another users clients. Connected the clients to users corerctly 
+BUG: flash messages not appearing for crud functionality, created toast notifications instead. 
+BUG: mobile nav bar not closing on second click, changed to desktop view in mobile for clearer functionality. Unresolved. 
+BUG: code not all formatted correctly. Python code formatted to pep8 using autopep8, html manually formatted. 
+
 
 Toasts
 
