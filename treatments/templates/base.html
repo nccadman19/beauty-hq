@@ -16,16 +16,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Glam Files</title>
+
 </head>
 
 <body>
 
     <header>
-        <!-- top navbar -->
+        <!-- fixed navbar -->
         <nav class="transparent z-depth-0">
             <div class="nav-wrapper">
                 <ul class="right">
-                  {% block header %}{% endblock %}
+                    {% block header %}{% endblock %}
                 </ul>
             </div>
         </nav>
@@ -37,31 +38,25 @@
     </main>
 
     <footer class="page-footer brown darken-1 smaller-footer center-align" style="position: fixed; bottom: 0; width: 100%;">
-        <div class="container">
-          <div class="row valign-wrapper">
-            <div class="logo" alt="Glam Files Logo"></div>
-            <nav class="transparent z-depth-0">
-              <div class="nav-wrapper">
-                <ul class="hide-on-med-and-down right">
-                  <li><a href="{{ url_for('home') }}">Home</a></li>
-                  <li><a href="{{ url_for('about') }}">About Us</a></li>
-                  <li><a href="{{ url_for('get_all_clients') }}">Clients</a></li>
-                  <li><a href="{{ url_for('new_client') }}">New Client</a></li>
-                </ul>
-                <a href="#" data-target="mobile-nav" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-              </div>
-            </nav>
-            <ul class="sidenav menu-list" id="mobile-nav">
-              <li><a href="{{ url_for('home') }}" class="sidenav-close">Home</a></li>
-              <li><a href="{{ url_for('about') }}" class="sidenav-close">About Us</a></li>
-              <li><a href="{{ url_for('get_all_clients') }}" class="sidenav-close">Clients</a></li>
-              <li><a href="{{ url_for('new_client') }}" class="sidenav-close">New Client</a></li>
-            </ul>
-          </div>
+        <div class="container footer-width">
+            <div class="row valign-wrapper">
+                <div class="logo" alt="Glam Files Logo"></div>
+                <nav class="transparent z-depth-0 desktop-view">
+                    <div class="nav-wrapper">
+                        <ul class="right">
+                            <li><a class="footer-nav" href="{{ url_for('home') }}">Home</a></li>
+                            <li><a class="footer-nav" href="{{ url_for('about') }}">About Us</a></li>
+                            <li><a class="footer-nav" href="{{ url_for('get_all_clients') }}">Clients</a></li>
+                            <li><a class="footer-nav" href="{{ url_for('new_client') }}">New Client</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
-      </footer>      
+    </footer>  
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
     <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
 </body>
 </html>

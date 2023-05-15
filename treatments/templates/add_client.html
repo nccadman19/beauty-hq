@@ -9,50 +9,50 @@
 {% endblock %}
 
 {% block content %}
-  <div class="highlight">
-      <div class="container">
-          <h3 class="brown-text text-darken-4 center-align">Add Client</h3>
-          <hr>
-          <form method="POST" action="{{ url_for('create_client') }}">
-              <div class="form-group">
-                <label class="titles" for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-              </div>
-              <div class="form-group">
-                <label class="titles" for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-              <div class="form-group">
-                <label class="titles" for="phone">Phone</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
-              </div>
-              <div class="form-group">
-                <label class="titles" for="lash_type">Lashes Type</label>
-                <select class="form-control" id="lash_type" name="lash_type">
-                    <option selected disabled>Select Option Here</option>
-                    <option value="classic">Classic</option>
-                    <option value="hybrid">Hybrid</option>
-                    <option value="russian">Russian</option>
-                </select>
+    <div class="highlight">
+        <div class="container">
+            <h3 class="brown-text text-darken-4 center-align">Add Client</h3>
+            <hr>
+            <form method="POST" action="{{ url_for('create_client') }}">
+                <div class="form-group">
+                    <label class="titles" for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                  <label class="titles" for="lash_notes">Lashes Notes</label>
-                  <textarea class="form-control" id="lash_notes" name="lash_notes"></textarea>
+                    <label class="titles" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                  <label class="titles" for="brow_type">Brows Type</label>
-                  <select class="form-control" id="brow_type" name="brow_type">
-                      <option selected disabled>Select Option Here</option>
-                      <option value="brow_tint">Brow & Tint</option>
-                      <option value="lamination">Lamination</option>
-                  </select>
+                    <label class="titles" for="phone">Phone</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                  <label class="titles" for="brow_notes">Brows Notes</label>
-                  <textarea class="form-control" id="brow_notes" name="brow_notes"></textarea>
+                    <label class="titles" for="lash_type">Lashes Type</label>
+                    <select class="form-control" id="lash_type" name="lash_type">
+                        <option selected disabled>Select Option Here</option>
+                        <option value="classic">Classic</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="russian">Russian</option>
+                    </select>
                 </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group">
+                    <label class="titles" for="lash_notes">Lashes Notes</label>
+                    <textarea class="form-control" id="lash_notes" name="lash_notes"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="titles" for="brow_type">Brows Type</label>
+                    <select class="form-control" id="brow_type" name="brow_type">
+                        <option selected disabled>Select Option Here</option>
+                        <option value="brow_tint">Brow & Tint</option>
+                        <option value="lamination">Lamination</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="titles" for="brow_notes">Brows Notes</label>
+                    <textarea class="form-control" id="brow_notes" name="brow_notes"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-      </div>
-  </div>
+        </div>
+    </div>
 {% endblock %}
