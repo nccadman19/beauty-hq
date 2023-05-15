@@ -10,13 +10,13 @@
 
 {% block content %}
     {% if toast_success %}
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var toastHTML = '<span>{{ toast_success.toast }}</span>';
-            var toastClasses = '{{ toast_success.class }}';
-            M.toast({html: toastHTML, classes: toastClasses});
-        });
-    </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var toastHTML = '<span>{{ toast_success.toast }}</span>';
+                var toastClasses = '{{ toast_success.class }}';
+                M.toast({html: toastHTML, classes: toastClasses});
+            });
+        </script>
     {% endif %}
     <div class="container highlight" style="width: 100%">
         <h3 class="brown-text text-darken-4 center-align">Clients</h3>
