@@ -23,15 +23,6 @@ body::before {
     filter: blur(5px);
     z-index: -1;
 }
-  
-
-main {
-    flex: 1 0 auto;
-}
-
-.valign-wrapper {
-    font-family: Raleway;
-}
 
 /* footer */
 footer {
