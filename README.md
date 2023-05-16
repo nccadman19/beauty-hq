@@ -193,6 +193,8 @@ BUG: users could not add client email addresses with the same email as another u
 BUG: flash messages not appearing for crud functionality, created toast notifications instead. 
 BUG: mobile nav bar not closing on second click, changed to desktop view in mobile for clearer functionality. Unresolved. 
 BUG: code not all formatted correctly. Python code formatted to pep8 using autopep8, html manually formatted. 
+BUG: receiving an error from js that lash brow text boxes dont exist on other pages 'script.js:17 Uncaught TypeError: Cannot set properties of null (setting 'disabled')
+    at HTMLDocument.<anonymous> (script.js:17:30) - added a null check before executing code
 
 
 Toasts

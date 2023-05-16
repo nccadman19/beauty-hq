@@ -7,28 +7,31 @@ document.addEventListener("DOMContentLoaded", function() {
   var elems = document.querySelectorAll('.modal');
   var instances = M.Modal.init(elems);
 
+  // create const for lash and brow info
   const lashTypeSelect = document.getElementById('lash_type');
   const lashNotesTextarea = document.getElementById('lash_notes');
   const browTypeSelect = document.getElementById('brow_type');
   const browNotesTextarea = document.getElementById('brow_notes');
 
   // Disable the lash notes textarea initially
-  lashNotesTextarea.disabled = true;
-  browNotesTextarea.disabled = true;
+  if (lashNotesTextarea !== null) {
+    lashNotesTextarea.disabled = true;
+  }
+  if (browNotesTextarea !== null) {
+    browNotesTextarea.disabled = true;
+  }
 
-  lashTypeSelect.addEventListener('change', function() {
-      if (lashTypeSelect.value !== '') {
-          lashNotesTextarea.disabled = false;
-      } else {
-          lashNotesTextarea.disabled = true;
-      }
-  });
+  // Enable or disable lash notes box
+  if (lashTypeSelect !== null && lashNotesTextarea !== null) {
+    lashTypeSelect.addEventListener('change', function() {
+      lashNotesTextarea.disabled = lashTypeSelect.value === '';
+    });
+  }
 
-  browTypeSelect.addEventListener('change', function() {
-      if (browTypeSelect.value !== '') {
-          browNotesTextarea.disabled = false;
-      } else {
-          browNotesTextarea.disabled = true;
-      }
-  });
+  // Enable or disable brow notes box
+  if (browTypeSelect !== null && browNotesTextarea !== null) {
+    browTypeSelect.addEventListener('change', function() {
+      browNotesTextarea.disabled = browTypeSelect.value === '';
+    });
+  }
 });
