@@ -9,13 +9,13 @@
 
 ## Table of Contents 
 - [**Project Goals**](#project-goals)
-  - [Business Goals](#business-goals)
-  - [User Goals](#user-goals)
+    - [Business Goals](#business-goals)
+    - [User Goals](#user-goals)
 - [**User Experience UX**](#user-experience-ux)
-  - [Strategy](#strategy)
-  - [Wireframes](#wireframes)
-  - [Surface](#surface)
-  - [Colormind](#colormind)
+    - [Strategy](#strategy)
+    - [Wireframes](#wireframes)
+    - [Surface](#surface)
+    - [Colormind](#colormind)
 - [**Features**](#features)
     - [NavBar & Footer](#navbar-&-footer)
     - [Home](#home)
@@ -113,13 +113,142 @@ This is a fully responsive website that was designed mobile-first as this is the
 
 ## Navbar & Footer
 
-The navbar is comprised of login button for users to login to their client database. The footer consists of the logo and menu items, including a home, about us, client and new client button. You can see how the footer turns into a toggled dropdown menu when viewed on mobile. 
+The navbar is comprised of login button for users to login to their client database. The footer consists of the logo and menu items, including a home, about us, client and new client button. The client and add client button are rerouted to the register page for a user to log in before being able to view clients. 
 
 ![Navbar Mockup](assets/images/readme/mockup-iphone.png)
 
 ## Home
 
+The home page is made with warm and calm colours to entice users to the site. It's basic in palette to ensure the infomation is very clear and readable. It gives an overview of the purpose of the site along with a button to immediately register. 
+
+Features: 
+
+1. Navbar with a login/logout button
+2. Name of the website, an inspiring quote, a paragraph about the purpose of the site and a register button
+3. Footer with logo and nav bar links to other pages
+
+![Home Mockup](assets/images/readme/mockup-index.png)
+
+## About Us
+
+This pages gives further detail on the uses and benefits to using the website. It also includes another register button, this makes it easier for users to immediately create an account once reading more about the purpose. 
+
+Features:
+
+1. An intro paragraph about the stresses of remembering users info and the purpose of the webiste
+2. A list of benefits to using the website 
+3. A create account button for potential users to register and make an account
+
+![About Mockup](assets/images/readme/mockup-gallery.png)
+
+## Register 
+
+This page displays a register form for users to create and account and to start using the service. 
+
+Features:
+
+1. A form including, name password and email for users to create the account
+2. A register button to submit the form
+3. The page reroutes to the login page for users to log in and user the service 
+
+![Register Mockup](assets/images/readme/mockup-price.png)
+
+## Login/Logout
+
+This page is where users can log into or out of their account to see their client list and notes.  
+
+Features:
+
+1. A page where users can login using their premade account info
+2. A login button that redirects to client page for using to immediately see client data
+3. A logout button that takes the user back to the homepage 
+
+![Login Mockup](assets/images/readme/mockup-quiz.png)
+
+## Clients 
+
+This page shows all client data available. There are cards for each clients where all data added by the user is visible to them 
+
+Features:
+
+1. A page where users can view client data
+2. An edit button for users to edit and make changes to client data
+3. A delete button for users to delete a client if needed, a pop up message appears to confirm deletion
+4. Pop up messages appear when a user is created, edited or deleted to confirm to the user any changes made 
+
+![Clients Mockup](assets/images/readme/mockup-quiz.png)
+
+## Edit 
+
+This page is where users can edit a specific client the info is pre-populated into the form for easy changes to be made.   
+
+Features:
+
+1. A pre-populated form of the specific client data they have added
+2. A submit button for the user to push data to the client page
+
+
+![Edit Mockup](assets/images/readme/mockup-quiz.png)
+
+## Add Client
+
+This is a page where users can create a new client to add to the database
+
+Features:
+
+1. A form for users to add new client data
+2. The name, email and phone number are required fields to submit the form
+3. The note boxes are uneditable under an option from the dropdown is selected to ensure no unneeded information is added to the database 
+4. A submit button that pushes the data to the client page 
+
+![Add Client Mockup](assets/images/readme/mockup-contact.png)
+
 [Back to top](#table-of-contents)
+
+## Testing 
+------------
+### Responsiveness 
+
+These tests have been completed on mobile and desktop. 
+
+| Page | Test | Functioning |
+| --------------- | --------------- | --------------- |
+| Website | Navbar | ✓ |
+| Website | Footer | ✓ |
+| Website | Menu | ✓ |
+| Website | Spelling & Viewing | ✓ |
+| Index | Page Responsiveness | ✓ |
+| Index | Navigation Links Correctly | ✓ |
+| About Us | Page Responsiveness | ✓ |
+| About Us | Button Responsiveness | ✓ |
+| Register | Page Responsiveness | ✓ |
+| Register | Form Submits | ✓ |
+| Register | Button Responsiveness | ✓ |
+| Login | Page Responsiveness | ✓ |
+| Login | Form Responsiveness | ✓ |
+| Login | Form Submits | ✓ |
+| Clients | Page Responsiveness | ✓ |
+| Clients | Button Responsiveness | ✓ |
+| Edit Client | Page Responsiveness | ✓ |
+| Edit Client | Form Submits | ✓ |
+| Edit Client | Button Responsiveness | ✓ |
+| Edit Client | Pop Up Message | ✓ |
+| Edit Client | Data Returns | ✓ |
+| Delete Client | Page Responsiveness | ✓ |
+| Delete Client | Button Responsiveness | ✓ |
+| Delete Client | Pop Up Message | ✓ |
+| Delete Client | Data Removed | ✓ |
+| Add Client | Page Responsiveness | ✓ |
+| Add Client | Form Submits | ✓ |
+| Add Client | Button Responsiveness | ✓ |
+| Add Client | Pop Up Message | ✓ |
+| Add Client | Data Returns | ✓ |
+| 404 | Page Responsiveness | ✓ |
+| 404 | Button Responsiveness | ✓ |
+
+### Functionality Testing
+
+
 
 Things used 
 
