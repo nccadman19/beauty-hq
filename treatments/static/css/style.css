@@ -134,6 +134,18 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
     background-color: rgba(233, 236, 239, 0.5);
 }
 
+@media only screen and (max-width: 600px) {
+    .form-group label {
+      font-size: 1.1rem; /* Adjust the font size as desired */
+    }
+
+    .form-group {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+  
+
 /** clients page **/
 .col .row {
     margin-left: 0;
