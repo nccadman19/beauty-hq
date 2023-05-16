@@ -55,6 +55,7 @@ def login():
     return render_template('login.html')
 
 
+# logout the user
 @app.route('/logout')
 @login_required
 def logout():
@@ -64,6 +65,7 @@ def logout():
     return redirect(url_for('home'))
 
 
+# register a new user
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
