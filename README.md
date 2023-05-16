@@ -179,6 +179,10 @@ https://materializecss.com/modals.html
 
 responsive cards 
 
+https://www.w3schools.com/jsref/prop_text_disabled.asp
+
+disabled text parts in form
+
 https://w3bits.com/css-masonry/
 
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
