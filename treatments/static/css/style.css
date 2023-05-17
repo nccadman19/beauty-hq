@@ -156,6 +156,10 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
     margin-right: 0;
 }
 
+.clients {
+    width: 100%;
+}
+
 /** new client **/ 
 .titles {
     color: #2F4C4F;
