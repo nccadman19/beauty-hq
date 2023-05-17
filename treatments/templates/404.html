@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="error">
-        <h3 class="brown-text text-darken-4 center-align">404</h3>
-        <div class="row">
-            <div class="col s12 center-align">
-                <p>Oh no!!! How have you ended up here... Click the button to go home!</p>
-                    <a href="{{ url_for('home') }}" class="waves-effect waves-light btn">TAKE ME HOME</a>
+    <section>
+        <div class="error">
+            <h3 class="brown-text text-darken-4 center-align">404</h3>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <p>Oh no!!! How have you ended up here... Click the button to go home!</p>
+                        <a href="{{ url_for('home') }}" class="waves-effect waves-light btn">TAKE ME HOME</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}
