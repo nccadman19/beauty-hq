@@ -88,7 +88,6 @@ def register():
 
 # creating a new client
 @app.route('/clients/new', methods=['GET'])
-@login_required
 def new_client():
     if current_user.is_authenticated:
         user = User.query.filter_by(id=current_user.id).first()
