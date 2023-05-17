@@ -34,6 +34,12 @@ footer {
     z-index: 1000;
 }
 
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 .brown.darken-1 {
     background-color: #5C4A56 !important;
 }
