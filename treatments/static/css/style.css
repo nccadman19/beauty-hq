@@ -153,8 +153,11 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
-}
-  
+
+    .container {
+        width: 90%;
+    }
+} 
 
 /** clients page **/
 .col .row {
