@@ -69,11 +69,20 @@ def logout():
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
-        first_name = request.form.get('first_name')
-        last_name = request.form.get('last_name')
-        email = request.form.get('email')
-        password = request.form.get('password')
+        # Get form data
+        first_name = request.form['first_name']
+        last_name = request.form['last_name']
+        email = request.form['email']
+        password = request.form['password']
         hashed_password = generate_password_hash(password)
+
+        # Check if user with the provided email already exists
+        existing_user = User.get_by_email(email)
+        if existing_user:
+            flash('An account with this email already exists.', 'error')
+            return render_template('register.html')
+
+        # Create the new user
         user = User(
             first_name=first_name,
             last_name=last_name,
@@ -82,7 +91,10 @@ def register():
         )
         db.session.add(user)
         db.session.commit()
+
+        flash('Registration successful. You can now log in.', 'success')
         return redirect(url_for('login'))
+
     return render_template('register.html')
 
 
