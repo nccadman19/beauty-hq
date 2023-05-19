@@ -14,25 +14,33 @@
         <h3 class="brown-text text-darken-4 center-align">Register Now</h3>
         <div class="row">
             <form class="col s12" method="POST" action="{{ url_for('register') }}">
+                <!-- Modal structure - error messages -->
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-info">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate" name="first_name">
+                        <input id="first_name" type="text" class="validate" name="first_name" required>
                         <label class="label-register" for="first_name">First Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate" name="last_name">
+                        <input id="last_name" type="text" class="validate" name="last_name" required>
                         <label class="label-register" for="last_name">Last Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" name="password">
+                        <input id="password" type="password" class="validate" name="password" required>
                         <label class="label-register" for="password">Password</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate" name="email">
+                        <input id="email" type="email" class="validate" name="email" required>
                         <label class="label-register" for="email">Email</label>
                     </div>
                 </div>
@@ -43,16 +51,6 @@
                         </button>
                     </div>
                 </div>
-                <!-- Flash messages for register errors -->
-                {% with messages = get_flashed_messages() %}
-                    {% if messages %}
-                        <div class="alert alert-success">
-                            {% for message in messages %}
-                                <p>{{ message }}</p>
-                            {% endfor %}
-                        </div>
-                    {% endif %}
-                {% endwith %}
             </form>
         </div>
     </section>
