@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // dropdown initialization
   var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems);
 
   // create const for lash and brow info
   const lashTypeSelect = document.getElementById('lash_type');
