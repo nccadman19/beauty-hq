@@ -1,6 +1,6 @@
-# Beau Belle | Nail Salon
+# Glam Files | Data Storing
 
-## Welsh Nail Salon | Situated in Newport Wales
+## Save Client Data | Easy Way to Store Info
 -------
 [![VisitWebsite][website-shield]][website-url]&nbsp;&nbsp;
 [![Issues][issues-shield]][issues-url]&nbsp;&nbsp;
@@ -8,22 +8,86 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 ## Table of Contents 
-- [**Project Goals**](#project-goals)
+
+- <details open>
+    <summary><a href="#ux">UX</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#goals">Goals</a></summary>
+
     - [Business Goals](#business-goals)
     - [User Goals](#user-goals)
-- [**User Experience UX**](#user-experience-ux)
     - [Strategy](#strategy)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#visual-design">Visual Design</a></summary>
+    
+    - [Fonts](#fonts)
+    - [Styling](#styling)
     - [Wireframes](#wireframes)
     - [Surface](#surface)
-    - [Colormind](#colormind)
-- [**Features**](#features)
-    - [NavBar & Footer](#navbar-&-footer)
+    - [Coolors](#coolors)
+    </details></li>
+    </ul>
+ </details>
+
+- <details open>
+    <summary><a href="#features">Features</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#goals">Page Features</a></summary>
+
+    - [Navbar & Footer](#navbar-footer)
     - [Home](#home)
-    - [Gallery](#gallery)
-    - [Pricing](#pricing)
-    - [Quiz](#quiz)
-    - [Quiz Layout](#quiz-layout)
-    - [Contact Us](#contact-us)
+    - [About Us](#about-us)
+    - [Register](#register)
+    - [Login/Logout](#login-logout)
+    - [Clients](#clients)
+    - [Add Client](#add-client)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#visual-design">Other Features</a></summary>
+    
+    - [Edit](#edit)
+    - [Delete](#delete)
+    - [404](#404)
+
+    </details></li>
+    </ul>
+ </details>
+
+- <details open>
+    <summary><a href="#features">Testing</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#goals">Page Features</a></summary>
+
+    - [Navbar & Footer](#navbar-footer)
+    - [Home](#home)
+    - [About Us](#about-us)
+    - [Register](#register)
+    - [Login/Logout](#login-logout)
+    - [Clients](#clients)
+    - [Add Client](#add-client)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#visual-design">Other Features</a></summary>
+    
+    - [Edit](#edit)
+    - [Delete](#delete)
+    - [404](#404)
+
+    </details></li>
+    </ul>
+ </details>
+
+
 - [**Testing**](#testing)
     - [Responsiveness](#responsiveness)
     - [Functionality Testing](#functionality-testing)
@@ -44,6 +108,8 @@
     - [Installation](#installation)
     - [Credits](#credits)
 
+# User Experience 
+
 # Project Goals
 
 ## Business Goals
@@ -60,10 +126,6 @@
 2. View past client interactions and appointment history
 3. Receive alerts and reminders for upcoming appointments and important client events
 4. Analyze client data to identify areas for improvement and growth in the business
-
-[Back to top](#table-of-contents)
-
-# User Experience UX
 
 ## Strategy
 
@@ -86,6 +148,10 @@ Be able to delete a client profile if it is no longer needed or if the informati
 The ability to log in to the web application with my credentials so that I can access my client profiles securely
 
 To be able to log out of the web application so that I can ensure the security of my client data
+
+[Back to top](#table-of-contents)
+
+# Visual Design
 
 ## Wireframes
 
@@ -111,7 +177,7 @@ I used Google fonts 'Libre Baskerville' and 'Raleway'. I used the Libre font to 
 
 This is a fully responsive website that was designed mobile-first as this is the most likely way it will be viewed; the website is divided into the 9 pages, 6 of which have buttoned links on the index page. The edit client page is not available until the user is logged into the website. There is also a 404 page for when someone ends up on an incorrect page. All of the headings use the font Raleway and the body too, this consistency has been used across the website to create a coherent design. 
 
-## Navbar & Footer
+## Navbar Footer
 
 The navbar is comprised of login button for users to login to their client database. The footer consists of the logo and menu items, including a home, about us, client and new client button. The client and add client button are rerouted to the register page for a user to log in before being able to view clients. 
 
@@ -153,7 +219,7 @@ Features:
 
 ![Register Mockup](assets/images/readme/mockup-price.png)
 
-## Login/Logout
+## Login Logout
 
 This page is where users can log into or out of their account to see their client list and notes.  
 
@@ -178,18 +244,6 @@ Features:
 
 ![Clients Mockup](assets/images/readme/mockup-quiz.png)
 
-## Edit 
-
-This page is where users can edit a specific client the info is pre-populated into the form for easy changes to be made.   
-
-Features:
-
-1. A pre-populated form of the specific client data they have added
-2. A submit button for the user to push data to the client page
-
-
-![Edit Mockup](assets/images/readme/mockup-quiz.png)
-
 ## Add Client
 
 This is a page where users can create a new client to add to the database
@@ -202,6 +256,22 @@ Features:
 4. A submit button that pushes the data to the client page 
 
 ![Add Client Mockup](assets/images/readme/mockup-contact.png)
+
+## Edit 
+
+This page is where users can edit a specific client the info is pre-populated into the form for easy changes to be made.   
+
+Features:
+
+1. A pre-populated form of the specific client data they have added
+2. A submit button for the user to push data to the client page
+
+
+![Edit Mockup](assets/images/readme/mockup-quiz.png)
+
+## Delete
+
+## 404
 
 [Back to top](#table-of-contents)
 
@@ -246,8 +316,15 @@ These tests have been completed on mobile and desktop.
 | 404 | Page Responsiveness | ✓ |
 | 404 | Button Responsiveness | ✓ |
 
-### Functionality Testing
+### Validator Testing
 
+I did not add alt tags to the page as I had to add the images to the css for it to work, aria-label tags added instead. 
+
+| Page | Test | No Errors |
+| --------------- | --------------- | --------------- |
+| Index | Validator HTML | ✓ |
+
+### Javascript Testing
 
 
 Things used 
@@ -314,6 +391,15 @@ disabled text parts in form
 
 https://w3bits.com/css-masonry/
 
+Toasts
+
+https://materializecss.com/toasts.html
+
+messages on crud function
+
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis
+
+
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
 BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
 BUG: database not loading to run on website, added code to route line 7 to fix error
@@ -324,16 +410,11 @@ BUG: mobile nav bar not closing on second click, changed to desktop view in mobi
 BUG: code not all formatted correctly. Python code formatted to pep8 using autopep8, html manually formatted. 
 BUG: receiving an error from js that lash brow text boxes dont exist on other pages 'script.js:17 Uncaught TypeError: Cannot set properties of null (setting 'disabled')
     at HTMLDocument.<anonymous> (script.js:17:30) - added a null check before executing code
-
-
-Toasts
-
-https://materializecss.com/toasts.html
-
-messages on crud function
-
-https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis
-
+BUG: allowing user to register without any info applied, changed html to required to avoid this 
+BUG: error 500 when submitted pre used email address, added if statement in routes to check is user was already registered and flash message added 
+UNRESOLVED BUG: cannot get js for the client page to go into a separate file!!
+BUG: allowing user to create another account when logged in, reroutes to client page
+UNRESOLVED BUG: when editing a user the text box remains uneditable until a user reselects the option
 
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
