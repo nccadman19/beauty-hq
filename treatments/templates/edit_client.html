@@ -30,7 +30,7 @@
                 </div>
                 <div class="form-group">
                     <label class="titles" for="lash_type">Lashes Type</label>
-                    <select class="form-control" id="lash_type" name="lash_type">
+                    <select class="form-control" id="lash_type" name="lash_type" aria-labelledby="lashTypeLabel">
                         <option selected disabled>Select Option Here</option>
                         <option value="classic" {% if client.lash_type == 'classic' %}selected{% endif %}>Classic</option>
                         <option value="hybrid" {% if client.lash_type == 'hybrid' %}selected{% endif %}>Hybrid</option>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="form-group">
                     <label class="titles" for="brow_type">Brows Type</label>
-                    <select class="form-control" id="brow_type" name="brow_type">
+                    <select class="form-control" id="brow_type" name="brow_type" aria-labelledby="browTypeLabel">
                         <option selected disabled>Select Option Here</option>
                         <option value="brow_tint" {% if client.brow_type == 'brow_tint' %}selected{% endif %}>Wax & Tint</option>
                         <option value="lamination" {% if client.brow_type == 'lamination' %}selected{% endif %}>Lamination</option>
