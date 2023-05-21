@@ -339,13 +339,40 @@ Edit Client, fails with an error noting that I cannot have multiple selected opt
 ### Javascript Testing
 
 JSHINT - tested on all javascript in js folder and inside of html. 
-| Page | Test | No Errors |
-| --------------- | --------------- | --------------- |
-| Login | JSLint | 0 Errors |
-| Clients | JSHint | 0 Errors |
-| Edit Client | JSHint | 0 Errors |
-| Delete Client | JSHint | 0 Errors |
-| Add Client | JSHint | 0 Errors |
+
+| Warning | Reasoning |
+| --------------- | --------------- |
+| 5 warnings ‘esversion 6’ to be installed to function | Code functioning fine but file added called ‘.jshintsc’ with code added to avoid this error appearing |
+| 1 undefined variable ‘M’ | Relates to the Materialize framework I am using for this project |
+| 1 unused variable instances | Used to call functions that initialise Materialize modals. The instances modal calls a dialog box that overlays the content to delete a client from the database and is needed for that process to function |
+
+JSLINT - tested on all javascript in js folder and inside of html. 
+
+| Warning | Reasoning |
+| --------------- | --------------- |
+| 2 undefined variable 'M' | Relates to the Materialize framework I am using for this project |
+
+### General Testing
+
+- Every time a feature was added, all functions were tested to see if there was an impact.
+- All forms have validation and will not submit without the proper information.
+- The site was sent to friends for feedback and testing.
+- All buttons tested thorughly myself and through friends using the website. 
+- 404 page tested by entering incorrect route name in the URL.
+- Edit and delete function tested several times to ensure correct functioning. 
+
+### Mobile Testing
+
+- I tested the site personally on my Apple device, going through the entire process, checking buttons, functions, checking out, etc. I was personally unable to test on Android.
+- I also tested the site on the following screens sizes on chrome: iPhone SE, iPhone XR, iPhone 12 Pro, Pixel 5, Samsung Galaxy S8+, Samsung Galaxy S20 Ultra, iPad Air, iPad Mini, Surface Pro 7, Surface Duo, Galaxy Fold, Samsung Galaxy A51, Nest Hub and Nest Hub Max. 
+- The site was sent to friends and relatives for them to follow the same process. 
+- Chrome was utilised to inspect the site in mobile format, going through the pages and functions.
+
+### Desktop Testing
+
+- The site was developed on a Macbook Air and the majority of testing occurred on Chrome.
+- The site was tested by friends and relatives on numerous desktop devices.
+- The site was marginally tested on other browsers, such as Firefox and Edge.
 
 Things used 
 
