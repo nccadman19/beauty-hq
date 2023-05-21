@@ -323,9 +323,29 @@ I did not add alt tags to the page as I had to add the images to the css for it 
 | Page | Test | No Errors |
 | --------------- | --------------- | --------------- |
 | Index | Validator HTML | ✓ |
+| About Us | Validator HTML | ✓ |
+| Register | Validator HTML| ✓ |
+| Login | Validator HTML | ✓ |
+| Clients | Validator HTML| ✓ |
+| Edit Client | Validator HTML| X |
+| Add Client | Validator HTML| ✓ |
+| 404 | Validator HTML| ✓ |
+| Website | Validator CSS | ✓ | 
+
+### Errors
+
+Edit Client, fails with an error noting that I cannot have multiple selected options without the multiple function. I do not need the multiple function as this is only a one option dropdown. The other 'option' that is suggested it is setting is a disabled option merely for identifying this is a dropdown menu. 
 
 ### Javascript Testing
 
+JSHINT - tested on all javascript in js folder and inside of html. 
+| Page | Test | No Errors |
+| --------------- | --------------- | --------------- |
+| Login | JSLint | 0 Errors |
+| Clients | JSHint | 0 Errors |
+| Edit Client | JSHint | 0 Errors |
+| Delete Client | JSHint | 0 Errors |
+| Add Client | JSHint | 0 Errors |
 
 Things used 
 
