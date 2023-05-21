@@ -68,6 +68,10 @@ def logout():
 # register a new user
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    # User is logged in, redirect to the client page
+    if current_user.is_authenticated:
+        return redirect(url_for('get_all_clients'))
+
     if request.method == 'POST':
         # Get form data
         first_name = request.form['first_name']
