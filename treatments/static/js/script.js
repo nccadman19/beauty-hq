@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
   M.FormSelect.init(selects);
 
   // dropdown initialization
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems);
+  let elems = document.querySelectorAll('.modal');
+  let instances = M.Modal.init(elems);
 
   // create const for lash and brow info
   const lashTypeSelect = document.getElementById('lash_type');
