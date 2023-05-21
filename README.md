@@ -332,6 +332,14 @@ I did not add alt tags to the page as I had to add the images to the css for it 
 | 404 | Validator HTML| ✓ |
 | Website | Validator CSS | ✓ | 
 
+HTML Validator
+----
+![Validator HTML](treatments/static/img/readme/validator_html.png)
+
+CSS Validator
+----
+![Validator CSS](treatments/static/img/readme/validator_css.png)
+
 ### Errors
 
 Edit Client, fails with an error noting that I cannot have multiple selected options without the multiple function. I do not need the multiple function as this is only a one option dropdown. The other 'option' that is suggested it is setting is a disabled option merely for identifying this is a dropdown menu. 
@@ -342,7 +350,7 @@ JSHINT - tested on all javascript in js folder and inside of html.
 
 | Warning | Reasoning |
 | --------------- | --------------- |
-| 5 warnings ‘esversion 6’ to be installed to function | Code functioning fine but file added called ‘.jshintsc’ with code added to avoid this error appearing |
+| 7 warnings ‘esversion 6’ to be installed to function | Code functioning fine but file added called ‘.jshintsc’ with code added to avoid this error appearing |
 | 1 undefined variable ‘M’ | Relates to the Materialize framework I am using for this project |
 | 1 unused variable instances | Used to call functions that initialise Materialize modals. The instances modal calls a dialog box that overlays the content to delete a client from the database and is needed for that process to function |
 
@@ -374,78 +382,56 @@ JSLINT - tested on all javascript in js folder and inside of html.
 - The site was tested by friends and relatives on numerous desktop devices.
 - The site was marginally tested on other browsers, such as Firefox and Edge.
 
-Things used 
+### Accessibility Testing
 
-https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar
+All pages were tested using Lighthouse on Chrome in desktop and mobile view. 
 
-Used to remove the shadow and line from the header
+Index          |  About Us
+:-------------------------:|:-------------------------:
+![Index Page Lighthouse](treatments/static/img/readme/access_index.png)  |  ![About Us Page Lighthouse](treatments/static/img/readme/access_about_us.png)
 
-https://materializecss.com/footer.html
+Register          |  Login
+:-------------------------:|:-------------------------:
+![Register Page Lighthouse](treatments/static/img/readme/access_register.png)  |  ![Login Page Lighthouse](treatments/static/img/readme/access_login.png)
 
-Template used 
+Clients          |  New Client
+:-------------------------:|:-------------------------:
+![Clients Page Lighthouse](treatments/static/img/readme/access_clients.png)  |  ![New Client Page Lighthouse](treatments/static/img/readme/access_add.png)
 
-https://sentry.io/answers/auto-reloading-a-flask-application/
+Edit          |  404
+:-------------------------:|:-------------------------:
+![Edir Page Lighthouse](treatments/static/img/readme/access_edit.png)  |  ![404 Page Lighthouse](treatments/static/img/readme/access_404.png)
 
-Rerun application where I can see edits in html, had to keep ending and rerunning flask prior to this 
 
-https://unsplash.com/s/photos/lash-extensions
+## Credits
 
-Hero image
+| Issue | Guidance | 
+| --------------- | --------------- | 
+| Used to remove the shadow and line from the header | https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar |
+| Framework templates | https://materializecss.com/footer.html |
+| Rerun application where I can see edits in html | https://sentry.io/answers/auto-reloading-a-flask-application/ |
+| Hero image | https://unsplash.com/s/photos/lash-extensions |
+| SQL Alchemy tutorial | https://www.youtube.com/watch?v=jaKMm9njcJc&list=PL4iRawDSyRvVd1V7A45YtAGzDk6ljVPm1 |
+| Login authentication | https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login | 
+| Login template | https://flask-login.readthedocs.io/en/latest/#login-example |
+| Links created to navigation pages | https://flask.palletsprojects.com/en/2.1.x/blueprints/ | 
+| Error handler | https://flask.palletsprojects.com/en/2.1.x/errorhandling/ |
+| Dropdown javascript | https://flask.palletsprojects.com/en/2.1.x/patterns/flashing/ |
+| Pre populating forms | https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript | 
+| Updating the database | https://realpython.com/flask-connexion-rest-api-part-2/#prepopulating-form-fields |
+| Deleting clients | https://realpython.com/flask-by-example-updating-the-ui/ | 
+| Responsive cards | https://materializecss.com/modals.html |
+| Disabled text in forms | https://www.w3schools.com/jsref/prop_text_disabled.asp | 
+| Creating popups | https://w3bits.com/css-masonry/ |
+| Messages added on CRUD functions | https://materializecss.com/toasts.html | 
+| Flask tutorial | https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis | 
 
-https://www.youtube.com/watch?v=jaKMm9njcJc&list=PL4iRawDSyRvVd1V7A45YtAGzDk6ljVPm1
+### Known Bugs
 
-Sqlalchemy tutorial 
+UNRESOLVED BUG: cannot get js for the client page to go into a separate file!!
+UNRESOLVED BUG: when editing a user the text box remains uneditable until a user reselects the option
 
-https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
-
-Login info 
-
-https://flask-login.readthedocs.io/en/latest/#login-example
-
-Login template html
-
-https://flask.palletsprojects.com/en/2.1.x/blueprints/
-
-Links to nav pages
-
-https://flask.palletsprojects.com/en/2.1.x/errorhandling/
-
-error handler
-
-https://flask.palletsprojects.com/en/2.1.x/patterns/flashing/
-
-dropdown javascript help
-
-https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript
-
-pre populating forms
-
-https://realpython.com/flask-connexion-rest-api-part-2/#prepopulating-form-fields
-
-updating the databse
-
-https://realpython.com/flask-by-example-updating-the-ui/
-
-deleting user
-
-https://materializecss.com/modals.html
-
-responsive cards 
-
-https://www.w3schools.com/jsref/prop_text_disabled.asp
-
-disabled text parts in form
-
-https://w3bits.com/css-masonry/
-
-Toasts
-
-https://materializecss.com/toasts.html
-
-messages on crud function
-
-https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis
-
+### Fixed Bugs 
 
 BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
 BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
@@ -459,10 +445,7 @@ BUG: receiving an error from js that lash brow text boxes dont exist on other pa
     at HTMLDocument.<anonymous> (script.js:17:30) - added a null check before executing code
 BUG: allowing user to register without any info applied, changed html to required to avoid this 
 BUG: error 500 when submitted pre used email address, added if statement in routes to check is user was already registered and flash message added 
-UNRESOLVED BUG: cannot get js for the client page to go into a separate file!!
 BUG: allowing user to create another account when logged in, reroutes to client page
-UNRESOLVED BUG: when editing a user the text box remains uneditable until a user reselects the option
-
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
