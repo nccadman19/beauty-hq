@@ -38,9 +38,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-.brown.darken-1 {
     background-color: #5C4A56 !important;
 }
 
@@ -120,6 +117,11 @@ footer {
 }
 
 /** register **/
+
+.test-color {
+    color: #383433;
+}
+
 label.label-register {
     color: #383433; 
 }
@@ -186,6 +188,7 @@ input:not([type]):focus:not([readonly])+label,input[type=text]:not(.browser-defa
 
 .select-wrapper {
     font-family: Raleway;
+    color: #2F4C4F;
 }
 
 h3 {
