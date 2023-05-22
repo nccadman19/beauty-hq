@@ -202,8 +202,6 @@ This is a fully responsive website that was designed mobile-first as this is the
 -------
 The navbar is comprised of login button for users to login to their client database. The footer consists of the logo and menu items, including a home, about us, client and new client button. The client and add client button are rerouted to the register page for a user to log in before being able to view clients. 
 
-![Navbar Mockup](assets/images/readme/mockup-iphone.png)
-
 ### Home
 ---------
 The home page is made with warm and calm colours to entice users to the site. It's basic in palette to ensure the infomation is very clear and readable. It gives an overview of the purpose of the site along with a button to immediately register. 
@@ -214,7 +212,7 @@ Features:
 2. Name of the website, an inspiring quote, a paragraph about the purpose of the site and a register button
 3. Footer with logo and nav bar links to other pages
 
-![Home Mockup](assets/images/readme/mockup-index.png)
+![Home Mockup](/treatments/static/img/readme/mockup_index.png)
 
 ### About Us
 --------
@@ -226,7 +224,7 @@ Features:
 2. A list of benefits to using the website 
 3. A create account button for potential users to register and make an account
 
-![About Mockup](assets/images/readme/mockup-gallery.png)
+![About Mockup](/treatments/static/img/readme/mockup_about.png)
 
 ### Register 
 ---------
@@ -238,7 +236,7 @@ Features:
 2. A register button to submit the form
 3. The page reroutes to the login page for users to log in and user the service 
 
-![Register Mockup](assets/images/readme/mockup-price.png)
+![Register Mockup](treatments/static/img/readme/mockup_register.png)
 
 ### Login Logout
 ---------
@@ -250,7 +248,7 @@ Features:
 2. A login button that redirects to client page for using to immediately see client data
 3. A logout button that takes the user back to the homepage 
 
-![Login Mockup](assets/images/readme/mockup-quiz.png)
+![Login Mockup](/treatments/static/img/readme/mockup_login.png)
 
 ### Clients 
 ---------
@@ -263,7 +261,7 @@ Features:
 3. A delete button for users to delete a client if needed, a pop up message appears to confirm deletion
 4. Pop up messages appear when a user is created, edited or deleted to confirm to the user any changes made 
 
-![Clients Mockup](assets/images/readme/mockup-quiz.png)
+![Clients Mockup](treatments/static/img/readme/mockup_clients.png)
 
 ### Add Client
 -------
@@ -276,7 +274,7 @@ Features:
 3. The note boxes are uneditable under an option from the dropdown is selected to ensure no unneeded information is added to the database 
 4. A submit button that pushes the data to the client page 
 
-![Add Client Mockup](assets/images/readme/mockup-contact.png)
+![Add Client Mockup](treatments/static/img/readme/mockup_add.png)
 
 ### Edit 
 --------
@@ -287,8 +285,7 @@ Features:
 1. A pre-populated form of the specific client data they have added
 2. A submit button for the user to push data to the client page
 
-
-![Edit Mockup](assets/images/readme/mockup-quiz.png)
+![Edit Mockup](treatments/static/img/readme/mockup_edit.png)
 
 ## Other Features 
 
@@ -296,13 +293,13 @@ Features:
 -------
 This is a feature on the client page where a user can immediately delete a client they no longer have. After selecting delete a popup appears to confirm deletion, this is to avoid accidental deletion of client data. 
 
-![Delete Mockup](assets/)
+![Delete Mockup](treatments/static/img/readme/mockup_delete.png)
 
 ### 404
 -----
 This page is for errors, if a user types in an incorrect url name or an incorrect url name is generated they are routed to the 404 page which then gives you the option to return to the homepage. 
 
-![404 Mockup]()
+![404 Mockup](treatments/static/img/readme/mockup_404.png)
 
 [Back to top](#table-of-contents)
 
