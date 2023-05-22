@@ -7,6 +7,7 @@
 [![ClosedIssues][closed-shield]][closed-url]&nbsp;&nbsp;
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+
 ## Table of Contents 
 
 - <details open>
@@ -27,6 +28,7 @@
     - [Fonts](#fonts)
     - [Styling](#styling)
     - [Wireframes](#wireframes)
+    - [Database Schema](#schema) 
     - [Surface](#surface)
     - [Coolors](#coolors)
     </details></li>
@@ -38,7 +40,7 @@
 
     <ul>
     <li><details>
-    <summary><a href="#goals">Page Features</a></summary>
+    <summary><a href="#features">Page Features</a></summary>
 
     - [Navbar & Footer](#navbar-footer)
     - [Home](#home)
@@ -50,7 +52,7 @@
     </details></li>
 
     <li><details>
-    <summary><a href="#visual-design">Other Features</a></summary>
+    <summary><a href="#other-features">Other Features</a></summary>
     
     - [Edit](#edit)
     - [Delete](#delete)
@@ -61,52 +63,60 @@
  </details>
 
 - <details open>
-    <summary><a href="#features">Testing</a></summary>
+    <summary><a href="#testing">Testing</a></summary>
 
     <ul>
     <li><details>
-    <summary><a href="#goals">Page Features</a></summary>
+    <summary><a href="#">Page Features</a></summary>
 
-    - [Navbar & Footer](#navbar-footer)
-    - [Home](#home)
-    - [About Us](#about-us)
-    - [Register](#register)
-    - [Login/Logout](#login-logout)
-    - [Clients](#clients)
-    - [Add Client](#add-client)
+    - [Responsiveness](#responsiveness)
+    - [Validator](#validator-testing)
+    - [Javascript](#javascript-testing)
+    - [Functionality](#functionality-testing)
+    - [User Story](#user-story-testing)
+    - [Known Bugs](#user-story-testing)
+    - [Resolved Bugs](#user-story-testing)
+
     </details></li>
 
     <li><details>
-    <summary><a href="#visual-design">Other Features</a></summary>
-    
-    - [Edit](#edit)
-    - [Delete](#delete)
-    - [404](#404)
+    <summary><a href="#visual-design">Other Testing</a></summary>
+   
+    - [General](#general-testing)
+    - [Mobile](#mobile-testing)
+    - [Desktop](#desktop-testing)
+    - [Accessibility](#accessibility-testing)
 
     </details></li>
     </ul>
  </details>
 
 
-- [**Testing**](#testing)
-    - [Responsiveness](#responsiveness)
-    - [Functionality Testing](#functionality-testing)
-    - [Compatibility Testing](#compatibility-testing)
-    - [Resolved Bugs](#resolved-bugs)
-    - [Unresolved Bugs](#unresolved-bugs)
-    - [Contact Us](#contact-us)
-- [**Usability Testing**](#usability-testing)
-    - [Navigation](#navigation)
-    - [Accessibility](#accessibility)
-- [**Github Deployment**](#github-deployment)
+- <details open>
+    <summary><a href="#acknowledgments ">Acknowledgements</a></summary>
+
+    <ul>
+    <li><details>
+    <summary><a href="#recognition">Recognition</a></summary>
+
+    - [Built With](#built-with)
+    - [Media](#media)
+    - [Credits](#credits)
+    </details></li>
+
+    <li><details>
+    <summary><a href="#deployment">Deployment</a></summary>
+    
     - [Preparation](#preparation)
     - [Instructions](#instructions)
     - [Installation](#installation)
-- [**Acknowledgements**](#acknowledgements)
-    - [Built With](#built-with)
-    - [Media](#media)
-    - [Installation](#installation)
-    - [Credits](#credits)
+    </details></li>
+    </ul>
+ </details>
+
+
+
+
 
 # User Experience 
 
@@ -489,5 +499,23 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 [desktop-wireframe]: /treatments/static/img/readme/desktop-wireframe.jpg
 [ipad-wireframe]: /treatments/static/img/readme/ipad-wireframe.jpg
 [iphone-wireframe]: /treatments/static/img/readme/iphone-wireframe.jpg
+[issues-shield]: https://img.shields.io/badge/ISSUES-3%20OPEN-yellow?style=for-the-badge&logo=closed
+[issues-url]: https://github.com/nccadman19/beau-belle/issues
+[closed-shield]: https://img.shields.io/badge/CLOSED%20ISSUES-11%20CLOSED-blue?style=for-the-badge&logo=closed
+[closed-url]: 
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://uk.linkedin.com/in/nicole-cadman-69a606230
 [website-shield]: https://img.shields.io/badge/VISIT%20WEBSITE-HERE-green?style=for-the-badge&logo=closed
-[website-url]: https://nccadman19.github.io/beau-belle/
+[website-url]: https://glam-files.herokuapp.com
+[materialize-shield]: https://img.shields.io/badge/Materialize-orange?style=for-the-badge
+[fonts-shield]: https://img.shields.io/badge/Font_Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=white
+[googlefont-shield]: https://img.shields.io/badge/-Google%20Fonts-grey?logo=google&style=for-the-badge
+[photo-shield]: https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black
+[dream-shield]: https://img.shields.io/badge/Adobe%20Dreamweaver-072401?style=for-the-badge&logo=Adobe%20Dreamweaver&logoColor=34F400
+[css-shield]: https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white
+[html-shield]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
+[javascript-shield]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[python-shield]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[rory-shield]: https://img.shields.io/badge/Rory%20Patrick%20Sheridan%20-MENTOR-lightgrey?style=for-the-badge&logo=closed
+
+
