@@ -67,10 +67,11 @@
 
     <ul>
     <li><details>
-    <summary><a href="#">Page Features</a></summary>
+    <summary><a href="web-testing">Web Testing</a></summary>
 
     - [Responsiveness](#responsiveness)
     - [Validator](#validator-testing)
+    - [Errors](#errors)
     - [Javascript](#javascript-testing)
     - [Functionality](#functionality-testing)
     - [User Story](#user-story-testing)
@@ -120,25 +121,25 @@
 
 # User Experience 
 
-# Project Goals
+## Goals
 
-## Business Goals
-
+### Business Goals
+------
 1. Streamline client management and record-keeping processes for the beautician
 2. Improve the overall efficiency and organization of the beautician's business
 3. Increase client retention by providing a more personalized and streamlined experience
 4. Boost profitability by identifying trends and patterns in client behavior and preferences
 
 
-## User Goals
-
+### User Goals
+------
 1. Easily access and update client information in one central location
 2. View past client interactions and appointment history
 3. Receive alerts and reminders for upcoming appointments and important client events
 4. Analyze client data to identify areas for improvement and growth in the business
 
-## Strategy
-
+### Strategy
+-------
 Considering the core UX principles I first started to think about the strategy for this website and defined who the target users would be and what features/technologies they would want.
 
 Glam Files target users are:
@@ -161,22 +162,32 @@ To be able to log out of the web application so that I can ensure the security o
 
 [Back to top](#table-of-contents)
 
-# Visual Design
+## Visual Design
 
-## Wireframes
+### Fonts 
+------
 
-Wireframes
+### Styling 
+------
 
+
+### Wireframes
+------
 [![Desktop-Wireframe]][desktop-wireframe]
 [![iPad-Wireframe]][ipad-wireframe]
 [![iPhone-Wireframe]][iphone-wireframe]
 
-## Surface
+### Database Schema 
+-------
+The schema defines the structure of the Client and User models, including their attributes and relationships, allowing you to store and retrieve data in a database using SQLAlchemy. The Client model represents information about clients, such as their name, contact details, lash and brow types, notes, and the associated user. The User model represents user information, including their name, email, password, and a relationship to their clients. With this schema, you can perform operations like creating, updating, and deleting clients in the database.
+![Database-Schema]
 
+### Surface
+------
 I chose a colour palette based around the hero image, I put the image into photoshop and copied a few of the colours inside of the image. I wanted this to be reflected on the website. I paired these colours with a dark slate grey and a lighter blue to contrast the more muted colours in the image. 
 
-## Coolors
-
+### Coolors
+------
 Using the coolors palette on the image I selected the colours from this palette and also a darker and lighter shade of contrasting colours to create a balances palette. 
 
 ![Coolors](/treatments/static/img/readme/coolors.png)
@@ -185,16 +196,18 @@ I used Google fonts 'Libre Baskerville' and 'Raleway'. I used the Libre font to 
 
 # Features
 
-This is a fully responsive website that was designed mobile-first as this is the most likely way it will be viewed; the website is divided into the 9 pages, 6 of which have buttoned links on the index page. The edit client page is not available until the user is logged into the website. There is also a 404 page for when someone ends up on an incorrect page. All of the headings use the font Raleway and the body too, this consistency has been used across the website to create a coherent design. 
+This is a fully responsive website that was designed mobile-first as this is the most likely way it will be viewed; the website is divided into the 9 pages, 6 of which have buttoned links on the index page. The edit client page is not available until the user is logged into the website. There is also a 404 page for when someone ends up on an incorrect page. All of the headings use the font Raleway and the body too, this consistency has been used across the website to create a coherent design.
 
-## Navbar Footer
+## Page Features
 
+### Navbar Footer
+-------
 The navbar is comprised of login button for users to login to their client database. The footer consists of the logo and menu items, including a home, about us, client and new client button. The client and add client button are rerouted to the register page for a user to log in before being able to view clients. 
 
 ![Navbar Mockup](assets/images/readme/mockup-iphone.png)
 
-## Home
-
+### Home
+---------
 The home page is made with warm and calm colours to entice users to the site. It's basic in palette to ensure the infomation is very clear and readable. It gives an overview of the purpose of the site along with a button to immediately register. 
 
 Features: 
@@ -205,8 +218,8 @@ Features:
 
 ![Home Mockup](assets/images/readme/mockup-index.png)
 
-## About Us
-
+### About Us
+--------
 This pages gives further detail on the uses and benefits to using the website. It also includes another register button, this makes it easier for users to immediately create an account once reading more about the purpose. 
 
 Features:
@@ -217,8 +230,8 @@ Features:
 
 ![About Mockup](assets/images/readme/mockup-gallery.png)
 
-## Register 
-
+### Register 
+---------
 This page displays a register form for users to create and account and to start using the service. 
 
 Features:
@@ -229,8 +242,8 @@ Features:
 
 ![Register Mockup](assets/images/readme/mockup-price.png)
 
-## Login Logout
-
+### Login Logout
+---------
 This page is where users can log into or out of their account to see their client list and notes.  
 
 Features:
@@ -241,8 +254,8 @@ Features:
 
 ![Login Mockup](assets/images/readme/mockup-quiz.png)
 
-## Clients 
-
+### Clients 
+---------
 This page shows all client data available. There are cards for each clients where all data added by the user is visible to them 
 
 Features:
@@ -254,8 +267,8 @@ Features:
 
 ![Clients Mockup](assets/images/readme/mockup-quiz.png)
 
-## Add Client
-
+### Add Client
+-------
 This is a page where users can create a new client to add to the database
 
 Features:
@@ -267,8 +280,8 @@ Features:
 
 ![Add Client Mockup](assets/images/readme/mockup-contact.png)
 
-## Edit 
-
+### Edit 
+--------
 This page is where users can edit a specific client the info is pre-populated into the form for easy changes to be made.   
 
 Features:
@@ -279,16 +292,22 @@ Features:
 
 ![Edit Mockup](assets/images/readme/mockup-quiz.png)
 
-## Delete
+## Other Features 
 
-## 404
+### Delete
+-------
+
+### 404
+-----
 
 [Back to top](#table-of-contents)
 
-## Testing 
-------------
-### Responsiveness 
+# Testing 
 
+## Web Testing 
+
+### Responsiveness 
+-------
 These tests have been completed on mobile and desktop. 
 
 | Page | Test | Functioning |
@@ -327,7 +346,7 @@ These tests have been completed on mobile and desktop.
 | 404 | Button Responsiveness | ✓ |
 
 ### Validator Testing
-
+---------
 I did not add alt tags to the page as I had to add the images to the css for it to work, aria-label tags added instead. 
 
 | Page | Test | No Errors |
@@ -351,11 +370,11 @@ CSS Validator
 ![Validator CSS](treatments/static/img/readme/validator_css.png)
 
 ### Errors
-
+--------
 Edit Client, fails with an error noting that I cannot have multiple selected options without the multiple function. I do not need the multiple function as this is only a one option dropdown. The other 'option' that is suggested it is setting is a disabled option merely for identifying this is a dropdown menu. 
 
 ### Javascript Testing
-
+--------
 JSHINT - tested on all javascript in js folder and inside of html. 
 
 | Warning | Reasoning |
@@ -370,8 +389,57 @@ JSLINT - tested on all javascript in js folder and inside of html.
 | --------------- | --------------- |
 | 2 undefined variable 'M' | Relates to the Materialize framework I am using for this project |
 
-### General Testing
+### Functionality 
+------ 
+### User Story
+-------
+Step-by-Step Walkthrough
+To evaluate the usability of the website for beauticians managing client information, I will provide a step-by-step walkthrough of someone using the site, highlighting key interactions and evaluating the user experience.
 
+Account Creation:
+    * User accesses the website and proceeds to create an account as a beautician.
+    * Key elements to test: Registration form, validation, and success message. 
+    * Steps:
+        1. User navigates to the registration page and fills out the required information.
+        2. User submits the form and verifies if the validation is properly implemented by checking that it is a unique email address. 
+        3. User receives a success message confirming the account creation.
+    * Outcome: The account creation process is intuitive, and the user receives clear feedback on successful account creation.
+Login Process:
+    * User logs in to the website using their credentials.
+    * Key elements to test: Login form, authentication process, and error handling.
+    * Steps:
+        1. User enters their username/email and password on the login page.
+        2. User submits the form and verifies if the authentication process is seamless.
+        3. User receives appropriate error messages if invalid credentials are provided.
+    * Outcome: The login process is user-friendly, secure, and provides clear feedback on login success or failure.
+Client Information Management:
+    * User navigates to the client management section to perform CRUD (Create, Read, Update, Delete) operations on client information.
+    * Key elements to test: Client listing, creation, editing, deletion, and data validation.
+    * Steps:
+        1. User views the list of existing clients and ensures that the information is displayed correctly.
+        2. User creates a new client entry, providing necessary details such as name, email, phone, lash type, lash notes, brow type, and brow notes.
+        3. User edits an existing client's information and verifies that the changes are saved accurately.
+        4. User deletes a client entry and confirms the deletion prompt.
+        5. User tests data validation by entering invalid or incomplete information during client creation or editing.
+    * Outcome: The client management functionality allows users to easily add, edit, and delete client information, and proper data validation ensures the accuracy and integrity of the data. 
+Overall Navigation and User Experience:
+    * User explores different sections of the website, including menus, navigation links, and interactive elements.
+    * Key elements to test: Navigation, responsiveness, and overall user experience.
+Steps:
+        1. User navigates through the website using the menus and links to access different pages.
+        2. User tests the responsiveness of the website by accessing it on different devices or screen sizes.
+        3. User interacts with various elements, such as buttons, forms, and filters, to evaluate the overall user experience.
+    * Outcome: The website provides intuitive navigation, adapts well to different devices, and offers a smooth and pleasant user experience
+
+### Known Bugs
+--------
+### Resolved Bugs 
+-------
+
+## Other Testing 
+
+### General Testing
+--------
 - Every time a feature was added, all functions were tested to see if there was an impact.
 - All forms have validation and will not submit without the proper information.
 - The site was sent to friends for feedback and testing.
@@ -380,20 +448,20 @@ JSLINT - tested on all javascript in js folder and inside of html.
 - Edit and delete function tested several times to ensure correct functioning. 
 
 ### Mobile Testing
-
+--------
 - I tested the site personally on my Apple device, going through the entire process, checking buttons, functions, checking out, etc. I was personally unable to test on Android.
 - I also tested the site on the following screens sizes on chrome: iPhone SE, iPhone XR, iPhone 12 Pro, Pixel 5, Samsung Galaxy S8+, Samsung Galaxy S20 Ultra, iPad Air, iPad Mini, Surface Pro 7, Surface Duo, Galaxy Fold, Samsung Galaxy A51, Nest Hub and Nest Hub Max. 
 - The site was sent to friends and relatives for them to follow the same process. 
 - Chrome was utilised to inspect the site in mobile format, going through the pages and functions.
 
 ### Desktop Testing
-
+-------
 - The site was developed on a Macbook Air and the majority of testing occurred on Chrome.
 - The site was tested by friends and relatives on numerous desktop devices.
 - The site was marginally tested on other browsers, such as Firefox and Edge.
 
 ### Accessibility Testing
-
+-------
 All pages were tested using Lighthouse on Chrome in desktop and mobile view. 
 
 Index          |  About Us
@@ -412,9 +480,12 @@ Edit          |  404
 :-------------------------:|:-------------------------:
 ![Edir Page Lighthouse](treatments/static/img/readme/access_edit.png)  |  ![404 Page Lighthouse](treatments/static/img/readme/access_404.png)
 
+# Acknowledgements 
 
-## Credits
+## Recognition 
 
+### Credits
+--------
 | Issue | Guidance | 
 | --------------- | --------------- | 
 | Used to remove the shadow and line from the header | https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar |
@@ -456,6 +527,27 @@ BUG: receiving an error from js that lash brow text boxes dont exist on other pa
 BUG: allowing user to register without any info applied, changed html to required to avoid this 
 BUG: error 500 when submitted pre used email address, added if statement in routes to check is user was already registered and flash message added 
 BUG: allowing user to create another account when logged in, reroutes to client page
+
+# Acknowledgements
+
+## Recognition 
+
+### Built With 
+
+![HTML][html-shield]
+![Python][python-shield]<br>
+![Materialize][materialize-shield]
+![CSS][css-shield]<br>
+![Javascript][javascript-shield]
+![FontAwesome][fonts-shield]<br>
+![GoogleFonts][googlefont-shield]
+![Photoshop][photo-shield]<br>
+![Dreamweaver][dream-shield]
+![Rory Patrick Sheridan][rory-shield]
+
+
+
+
 
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
@@ -502,7 +594,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 [issues-shield]: https://img.shields.io/badge/ISSUES-3%20OPEN-yellow?style=for-the-badge&logo=closed
 [issues-url]: https://github.com/nccadman19/beau-belle/issues
 [closed-shield]: https://img.shields.io/badge/CLOSED%20ISSUES-11%20CLOSED-blue?style=for-the-badge&logo=closed
-[closed-url]: 
+[closed-url]: https://github.com/nccadman19/glam-files/issues?q=is%3Aissue+is%3Aclosed
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://uk.linkedin.com/in/nicole-cadman-69a606230
 [website-shield]: https://img.shields.io/badge/VISIT%20WEBSITE-HERE-green?style=for-the-badge&logo=closed
@@ -517,5 +609,5 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 [javascript-shield]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 [python-shield]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
 [rory-shield]: https://img.shields.io/badge/Rory%20Patrick%20Sheridan%20-MENTOR-lightgrey?style=for-the-badge&logo=closed
-
+[database-schema]: /treatments/static/img/readme/database_schema.jpg
 
