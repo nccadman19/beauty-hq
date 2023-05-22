@@ -296,9 +296,15 @@ Features:
 
 ### Delete
 -------
+This is a feature on the client page where a user can immediately delete a client they no longer have. After selecting delete a popup appears to confirm deletion, this is to avoid accidental deletion of client data. 
+
+![Delete Mockup](assets/)
 
 ### 404
 -----
+This page is for errors, if a user types in an incorrect url name or an incorrect url name is generating they are routed to the 404 page which then gives you the option to return to the homepage. 
+
+![404 Mockup]()
 
 [Back to top](#table-of-contents)
 
@@ -382,6 +388,8 @@ JSHINT - tested on all javascript in js folder and inside of html.
 | 7 warnings ‘esversion 6’ to be installed to function | Code functioning fine but file added called ‘.jshintsc’ with code added to avoid this error appearing |
 | 1 undefined variable ‘M’ | Relates to the Materialize framework I am using for this project |
 | 1 unused variable instances | Used to call functions that initialise Materialize modals. The instances modal calls a dialog box that overlays the content to delete a client from the database and is needed for that process to function |
+
+![JSHint Testing](/treatments/static/img/readme/jshint.png)
 
 JSLINT - tested on all javascript in js folder and inside of html. 
 
@@ -545,6 +553,49 @@ BUG: allowing user to create another account when logged in, reroutes to client 
 ![Dreamweaver][dream-shield]
 ![Rory Patrick Sheridan][rory-shield]
 
+## Deployment 
+
+### Preparation
+------
+* To prepare for using GitHub, you can either copy or clone the repository for direct deployment.
+* To get started, you'll need a free GitHub account, a free ElephantSQL account, a Heroku account and preferably some kind of image editor. 
+
+### Installation 
+------
+1. Configure the Gitpod workspace:
+    * After the workspace is created, it will need to be opened in your browser using gitpod. 
+    * Install the relevant 
+    * ```pip3 install Flask-SQLAlchemy psycopg2 flask-login```
+    * Create your own env.py file with the following information 
+    * ```import os
+    * 
+    * os.environ.setdefault("IP", "0.0.0.0")
+    * os.environ.setdefault("PORT", "5000")
+    * os.environ.setdefault("SECRET_KEY", "any_secret_key")
+    * os.environ.setdefault("DEBUG", "True")
+    * os.environ.setdefault("DEVELOPMENT", "True")
+    * os.environ.setdefault("DB_URL", "postgresql:///treatments")```
+    * Run the program with the following commands in gitpod to view and make changes 
+    * ```set_pg
+    * export FLASK_APP=run.py
+    * flask run```
+
+1. Set up the database connection:
+    * Sign up for an ElephantSQL account (https://www.elephantsql.com/) if you haven't already.
+    * Create a new database instance on ElephantSQL and make note of the connection URL.
+2. Configure the Flask application to use SQLAlchemy and ElephantSQL:
+    * Open the run.py file and add the necessary imports for SQLAlchemy and the PostgreSQL database:python
+    * Replace <username>, <password>, <host>, <port>, and <database> in the SQLALCHEMY_DATABASE_URI with the corresponding details from your ElephantSQL database instance.
+3. Create a Heroku account (https://www.heroku.com/) if you don't have one. 
+ADD STEPS 
+
+### Instructions 
+------
+1. To set up your repository on GitHub, log in to your account and navigate to https://github.com/nccadman19/glam-files
+2. You can either create your own repository and copy or clone it, or you can fork the existing repository.
+3. Use the git add, git commit, and git push commands to upload your files to the repository.
+4. By default, GitHub Pages updates from the master branch. To make your website live, go to the Settings page of the repository and scroll down to the GitHub Pages section.
+5. Select the Master Branch as the source and confirm your selection. After a minute or two, your website should be live and ready to view.
 
 
 
