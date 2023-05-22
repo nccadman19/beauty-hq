@@ -11,7 +11,7 @@
 ## Table of Contents 
 
 - <details open>
-    <summary><a href="#ux">UX</a></summary>
+    <summary><a href="#user-experience">UX</a></summary>
 
     <ul>
     <li><details>
@@ -28,7 +28,7 @@
     - [Fonts](#fonts)
     - [Styling](#styling)
     - [Wireframes](#wireframes)
-    - [Database Schema](#schema) 
+    - [Database Schema](#database-schema) 
     - [Surface](#surface)
     - [Coolors](#coolors)
     </details></li>
@@ -40,7 +40,7 @@
 
     <ul>
     <li><details>
-    <summary><a href="#features">Page Features</a></summary>
+    <summary><a href="#page-features">Page Features</a></summary>
 
     - [Navbar & Footer](#navbar-footer)
     - [Home](#home)
@@ -73,15 +73,14 @@
     - [Validator](#validator-testing)
     - [Errors](#errors)
     - [Javascript](#javascript-testing)
-    - [Functionality](#functionality-testing)
-    - [User Story](#user-story-testing)
-    - [Known Bugs](#user-story-testing)
-    - [Resolved Bugs](#user-story-testing)
+    - [User Story](#user-story)
+    - [Known Bugs](#known-bugs)
+    - [Resolved Bugs](#resolved-bugs)
 
     </details></li>
 
     <li><details>
-    <summary><a href="#visual-design">Other Testing</a></summary>
+    <summary><a href="#other-testing">Other Testing</a></summary>
    
     - [General](#general-testing)
     - [Mobile](#mobile-testing)
@@ -94,14 +93,13 @@
 
 
 - <details open>
-    <summary><a href="#acknowledgments ">Acknowledgements</a></summary>
+    <summary><a href="#acknowledgements ">Acknowledgements</a></summary>
 
     <ul>
     <li><details>
     <summary><a href="#recognition">Recognition</a></summary>
 
     - [Built With](#built-with)
-    - [Media](#media)
     - [Credits](#credits)
     </details></li>
 
@@ -114,10 +112,6 @@
     </details></li>
     </ul>
  </details>
-
-
-
-
 
 # User Experience 
 
@@ -144,21 +138,21 @@ Considering the core UX principles I first started to think about the strategy f
 
 Glam Files target users are:
 
-Aged 18-60 primarily women 
+* Aged 18-60 primarily women 
 
 What these users would be looking for:
 
-Streamlined and easy-to-use client management system
+* Streamlined and easy-to-use client management system
 
-Access to client information in one central location
+* Access to client information in one central location
 
-Ability to edit and update client information if there are any changes
+* Ability to edit and update client information if there are any changes
 
-Be able to delete a client profile if it is no longer needed or if the information is incorrect
+* Be able to delete a client profile if it is no longer needed or if the information is incorrect
 
-The ability to log in to the web application with my credentials so that I can access my client profiles securely
+* The ability to log in to the web application with my credentials so that I can access my client profiles securely
 
-To be able to log out of the web application so that I can ensure the security of my client data
+* To be able to log out of the web application so that I can ensure the security of my client data
 
 [Back to top](#table-of-contents)
 
@@ -166,10 +160,15 @@ To be able to log out of the web application so that I can ensure the security o
 
 ### Fonts 
 ------
+I used Google fonts 'Libre Baskerville' and 'Raleway'. I used the Libre font to make the header text on the index page stand out from the regular font on the site. I then used 'Raleway' as I thought it was very easy to read and looks professional.
 
 ### Styling 
 ------
-
+* Materialize CSS files have been incorporated into the project to leverage its pre-defined class defaults and components.
+* The class defaults of Materialize CSS have been overridden to align with the desired styling preferences.
+* Customisation has been made easier by modifying the source files directly, allowing for a consistent and unified design.
+* The website incorporates responsive web design, allowing the site to adjust dynamically based on the screen size.
+* Links present on each page have been intelligently designed to redirect users to essential sections, such as the Client or the Register page, irrespective of their current location.
 
 ### Wireframes
 ------
@@ -180,6 +179,7 @@ To be able to log out of the web application so that I can ensure the security o
 ### Database Schema 
 -------
 The schema defines the structure of the Client and User models, including their attributes and relationships, allowing you to store and retrieve data in a database using SQLAlchemy. The Client model represents information about clients, such as their name, contact details, lash and brow types, notes, and the associated user. The User model represents user information, including their name, email, password, and a relationship to their clients. With this schema, you can perform operations like creating, updating, and deleting clients in the database.
+
 ![Database-Schema]
 
 ### Surface
@@ -191,8 +191,6 @@ I chose a colour palette based around the hero image, I put the image into photo
 Using the coolors palette on the image I selected the colours from this palette and also a darker and lighter shade of contrasting colours to create a balances palette. 
 
 ![Coolors](/treatments/static/img/readme/coolors.png)
-
-I used Google fonts 'Libre Baskerville' and 'Raleway'. I used the Libre font to make the initial text stand out from the regular font on the site. I then used 'Raleway' as I thought it was very easy to read and looks professional.
 
 # Features
 
@@ -302,7 +300,7 @@ This is a feature on the client page where a user can immediately delete a clien
 
 ### 404
 -----
-This page is for errors, if a user types in an incorrect url name or an incorrect url name is generating they are routed to the 404 page which then gives you the option to return to the homepage. 
+This page is for errors, if a user types in an incorrect url name or an incorrect url name is generated they are routed to the 404 page which then gives you the option to return to the homepage. 
 
 ![404 Mockup]()
 
@@ -382,6 +380,7 @@ Edit Client, fails with an error noting that I cannot have multiple selected opt
 ### Javascript Testing
 --------
 JSHINT - tested on all javascript in js folder and inside of html. 
+------
 
 | Warning | Reasoning |
 | --------------- | --------------- |
@@ -392,58 +391,86 @@ JSHINT - tested on all javascript in js folder and inside of html.
 ![JSHint Testing](/treatments/static/img/readme/jshint.png)
 
 JSLINT - tested on all javascript in js folder and inside of html. 
-
+------
 | Warning | Reasoning |
 | --------------- | --------------- |
 | 2 undefined variable 'M' | Relates to the Materialize framework I am using for this project |
 
-### Functionality 
------- 
 ### User Story
 -------
 Step-by-Step Walkthrough
 To evaluate the usability of the website for beauticians managing client information, I will provide a step-by-step walkthrough of someone using the site, highlighting key interactions and evaluating the user experience.
 
 Account Creation:
-    * User accesses the website and proceeds to create an account as a beautician.
-    * Key elements to test: Registration form, validation, and success message. 
-    * Steps:
-        1. User navigates to the registration page and fills out the required information.
-        2. User submits the form and verifies if the validation is properly implemented by checking that it is a unique email address. 
-        3. User receives a success message confirming the account creation.
-    * Outcome: The account creation process is intuitive, and the user receives clear feedback on successful account creation.
-Login Process:
-    * User logs in to the website using their credentials.
-    * Key elements to test: Login form, authentication process, and error handling.
-    * Steps:
-        1. User enters their username/email and password on the login page.
-        2. User submits the form and verifies if the authentication process is seamless.
-        3. User receives appropriate error messages if invalid credentials are provided.
-    * Outcome: The login process is user-friendly, secure, and provides clear feedback on login success or failure.
-Client Information Management:
-    * User navigates to the client management section to perform CRUD (Create, Read, Update, Delete) operations on client information.
-    * Key elements to test: Client listing, creation, editing, deletion, and data validation.
-    * Steps:
-        1. User views the list of existing clients and ensures that the information is displayed correctly.
-        2. User creates a new client entry, providing necessary details such as name, email, phone, lash type, lash notes, brow type, and brow notes.
-        3. User edits an existing client's information and verifies that the changes are saved accurately.
-        4. User deletes a client entry and confirms the deletion prompt.
-        5. User tests data validation by entering invalid or incomplete information during client creation or editing.
-    * Outcome: The client management functionality allows users to easily add, edit, and delete client information, and proper data validation ensures the accuracy and integrity of the data. 
-Overall Navigation and User Experience:
-    * User explores different sections of the website, including menus, navigation links, and interactive elements.
-    * Key elements to test: Navigation, responsiveness, and overall user experience.
+* User accesses the website and proceeds to create an account as a beautician.
+* Key elements to test: Registration form, validation, and success message. 
+
 Steps:
-        1. User navigates through the website using the menus and links to access different pages.
-        2. User tests the responsiveness of the website by accessing it on different devices or screen sizes.
-        3. User interacts with various elements, such as buttons, forms, and filters, to evaluate the overall user experience.
-    * Outcome: The website provides intuitive navigation, adapts well to different devices, and offers a smooth and pleasant user experience
+1. User navigates to the registration page and fills out the required information.
+2. User submits the form and verifies if the validation is properly implemented by checking that it is a unique email address. 
+2. User receives a success message confirming the account creation.
+
+Outcome: The account creation process is intuitive, and the user receives clear feedback on successful account creation.
+
+Login Process:
+* User logs in to the website using their credentials.
+* Key elements to test: Login form, authentication process, and error handling.
+
+Steps:
+1. User enters their username/email and password on the login page.
+2. User submits the form and verifies if the authentication process is seamless.
+3. User receives appropriate error messages if invalid credentials are provided.
+
+Outcome: The login process is user-friendly, secure, and provides clear feedback on login success or failure.
+
+Client Information Management:
+* User navigates to the client management section to perform CRUD (Create, Read, Update, Delete) operations on client information.
+* Key elements to test: Client listing, creation, editing, deletion, and data validation.
+
+Steps:
+1. User views the list of existing clients and ensures that the information is displayed correctly.
+2. User creates a new client entry, providing necessary details such as name, email, phone, lash type, lash notes, brow type, and brow notes.
+3. User edits an existing client's information and verifies that the changes are saved accurately.
+4. User deletes a client entry and confirms the deletion prompt.
+5. User tests data validation by entering invalid or incomplete information during client creation or editing.
+
+Outcome: The client management functionality allows users to easily add, edit, and delete client information, and proper data validation ensures the accuracy and integrity of the data. 
+
+Overall Navigation and User Experience:
+* User explores different sections of the website, including menus, navigation links, and interactive elements.
+* Key elements to test: Navigation, responsiveness, and overall user experience.
+
+Steps:
+1. User navigates through the website using the menus and links to access different pages.
+2. User tests the responsiveness of the website by accessing it on different devices or screen sizes.
+3. User interacts with various elements, such as buttons, forms, and filters, to evaluate the overall user experience.
+
+Outcome: The website provides intuitive navigation, adapts well to different devices, and offers a smooth and pleasant user experience
 
 ### Known Bugs
 --------
+| Bug | Resolved | 
+| --------------- | --------------- | 
+| Unable to store js on client page in separate js file | X | 
+| When editing user the lash/brow notes box remains unediable until user reselects an option | X | 
+
 ### Resolved Bugs 
 -------
+| Bug | Resolved | 
+| --------------- | --------------- | 
+| Taking user to rendering clients.html and not to the clients page with user loaded | ✓ | 
+| Login/Logout buttons not showing correctly when user is logged in, if else statement added | ✓ | 
+| Database not loading to run on website, edited init file to fix | ✓ | 
+| Favicon icon error, link added to head | ✓ | 
+| Users could not add client email addresses with the same email as other users, backref added | ✓ | 
+| Flash messages not appearing for crud functionality, created toast notifications instead | ✓ | 
+| Code not formatted correctly. Python code formatted to pep8 using autopep8, html manually formatted | ✓ | 
+| Receiving an error from js that lash brow text boxes doesn't exist on other pages | ✓ | 
+| Allowing user to register without any info applied, required added to avoid this | ✓ | 
+| Error 500 when submitted pre used email address, if statement and flash message added | ✓ | 
+| Allowing user to create another account when logged in, reroutes to client page | ✓ | 
 
+ 
 ## Other Testing 
 
 ### General Testing
@@ -496,7 +523,7 @@ Edit          |  404
 --------
 | Issue | Guidance | 
 | --------------- | --------------- | 
-| Used to remove the shadow and line from the header | https://stackoverflow.com/questions/51750706/how-to-turn-off-materializes-default-shadows-for-navbar |
+| Used to remove the shadow and line from the header | https://stackoverflow.com/questions/51750706/ | how-to-turn-off-materializes-default-shadows-for-navbar |
 | Framework templates | https://materializecss.com/footer.html |
 | Rerun application where I can see edits in html | https://sentry.io/answers/auto-reloading-a-flask-application/ |
 | Hero image | https://unsplash.com/s/photos/lash-extensions |
@@ -513,28 +540,7 @@ Edit          |  404
 | Disabled text in forms | https://www.w3schools.com/jsref/prop_text_disabled.asp | 
 | Creating popups | https://w3bits.com/css-masonry/ |
 | Messages added on CRUD functions | https://materializecss.com/toasts.html | 
-| Flask tutorial | https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis | 
-
-### Known Bugs
-
-UNRESOLVED BUG: cannot get js for the client page to go into a separate file!!
-UNRESOLVED BUG: when editing a user the text box remains uneditable until a user reselects the option
-
-### Fixed Bugs 
-
-BUG: logout message issue, taking to rendered clients.html and not reidrecting to clients premade, fixed
-BUG: login and logout buttons not showing correctly once user was logged in, added if statement to button to check whether user was logged in and to amend button accordingly. 
-BUG: database not loading to run on website, added code to route line 7 to fix error
-BUG: favicon icon error 
-BUG: users could not add client email addresses with the same email as another users clients. Connected the clients to users corerctly 
-BUG: flash messages not appearing for crud functionality, created toast notifications instead. 
-BUG: mobile nav bar not closing on second click, changed to desktop view in mobile for clearer functionality. Unresolved. 
-BUG: code not all formatted correctly. Python code formatted to pep8 using autopep8, html manually formatted. 
-BUG: receiving an error from js that lash brow text boxes dont exist on other pages 'script.js:17 Uncaught TypeError: Cannot set properties of null (setting 'disabled')
-    at HTMLDocument.<anonymous> (script.js:17:30) - added a null check before executing code
-BUG: allowing user to register without any info applied, changed html to required to avoid this 
-BUG: error 500 when submitted pre used email address, added if statement in routes to check is user was already registered and flash message added 
-BUG: allowing user to create another account when logged in, reroutes to client page
+| Flask tutorial | https://blog.miguelgrinberg.com/post | the-flask-mega-tutorial-part-xxiii-application-programming-interfaces-apis | 
 
 # Acknowledgements
 
@@ -560,35 +566,6 @@ BUG: allowing user to create another account when logged in, reroutes to client 
 * To prepare for using GitHub, you can either copy or clone the repository for direct deployment.
 * To get started, you'll need a free GitHub account, a free ElephantSQL account, a Heroku account and preferably some kind of image editor. 
 
-### Installation 
-------
-1. Configure the Gitpod workspace:
-    * After the workspace is created, it will need to be opened in your browser using gitpod. 
-    * Install the relevant 
-    * ```pip3 install Flask-SQLAlchemy psycopg2 flask-login```
-    * Create your own env.py file with the following information 
-    * ```import os
-    * 
-    * os.environ.setdefault("IP", "0.0.0.0")
-    * os.environ.setdefault("PORT", "5000")
-    * os.environ.setdefault("SECRET_KEY", "any_secret_key")
-    * os.environ.setdefault("DEBUG", "True")
-    * os.environ.setdefault("DEVELOPMENT", "True")
-    * os.environ.setdefault("DB_URL", "postgresql:///treatments")```
-    * Run the program with the following commands in gitpod to view and make changes 
-    * ```set_pg
-    * export FLASK_APP=run.py
-    * flask run```
-
-1. Set up the database connection:
-    * Sign up for an ElephantSQL account (https://www.elephantsql.com/) if you haven't already.
-    * Create a new database instance on ElephantSQL and make note of the connection URL.
-2. Configure the Flask application to use SQLAlchemy and ElephantSQL:
-    * Open the run.py file and add the necessary imports for SQLAlchemy and the PostgreSQL database:python
-    * Replace <username>, <password>, <host>, <port>, and <database> in the SQLALCHEMY_DATABASE_URI with the corresponding details from your ElephantSQL database instance.
-3. Create a Heroku account (https://www.heroku.com/) if you don't have one. 
-ADD STEPS 
-
 ### Instructions 
 ------
 1. To set up your repository on GitHub, log in to your account and navigate to https://github.com/nccadman19/glam-files
@@ -597,44 +574,51 @@ ADD STEPS
 4. By default, GitHub Pages updates from the master branch. To make your website live, go to the Settings page of the repository and scroll down to the GitHub Pages section.
 5. Select the Master Branch as the source and confirm your selection. After a minute or two, your website should be live and ready to view.
 
+### Installation 
+------
+Configure the Gitpod workspace:
+* After the workspace is created, it will need to be opened in your browser using gitpod. 
+* Install the relevant line of code for the project to run:
+    ```
+    pip3 install Flask-SQLAlchemy psycopg2 flask-login
+    ```
+* Create your own env.py file with the following information:
+    ```python
+    import os
+    
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "any_secret_key")
+    os.environ.setdefault("DEBUG", "True")
+    os.environ.setdefault("DEVELOPMENT", "True")
+    os.environ.setdefault("DB_URL", "postgresql:///treatments")
+    ```
+* Run the program with the following commands in gitpod to view and make changes:
+    ```
+    set_pg
+    export FLASK_APP=run.py
+    flask run
+    ```
 
+Connecting:
+Set up the database connection:
+* Sign up for an ElephantSQL account (https://www.elephantsql.com/) if you haven't already.
+* Create a new database instance on ElephantSQL and make note of the connection URL.
 
+Configure the Flask application to use SQLAlchemy and ElephantSQL:
+* Open the run.py file and add the necessary imports for SQLAlchemy and the PostgreSQL database:python.
+* Replace `<username>, <password>, <host>, <port>, and <database>` in the SQLALCHEMY_DATABASE_URI with the corresponding details from your ElephantSQL database instance.
 
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome Nic,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Configure Heroku:
+* Create a Heroku account (https://www.heroku.com/) if you don't have one. 
+* Create new app and add corresponding information from the same file as above. Add URL from Elephant SQL.
+* Link to github and select filename of project and manually deploy project. 
+* Open terminal in heroku and run the following code (do this each time a change is made):
+    ```
+    from taskmanager import db
+    db.create_all()
+    exit()
+    ```
 
 ------
 
@@ -642,7 +626,7 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 [desktop-wireframe]: /treatments/static/img/readme/desktop-wireframe.jpg
 [ipad-wireframe]: /treatments/static/img/readme/ipad-wireframe.jpg
 [iphone-wireframe]: /treatments/static/img/readme/iphone-wireframe.jpg
-[issues-shield]: https://img.shields.io/badge/ISSUES-3%20OPEN-yellow?style=for-the-badge&logo=closed
+[issues-shield]: https://img.shields.io/badge/ISSUES-2%20OPEN-yellow?style=for-the-badge&logo=closed
 [issues-url]: https://github.com/nccadman19/beau-belle/issues
 [closed-shield]: https://img.shields.io/badge/CLOSED%20ISSUES-11%20CLOSED-blue?style=for-the-badge&logo=closed
 [closed-url]: https://github.com/nccadman19/glam-files/issues?q=is%3Aissue+is%3Aclosed
@@ -659,6 +643,6 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 [html-shield]: https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white
 [javascript-shield]: https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E
 [python-shield]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
-[rory-shield]: https://img.shields.io/badge/Rory%20Patrick%20Sheridan%20-MENTOR-lightgrey?style=for-the-badge&logo=closed
+[rory-shield]: https://img.shields.io/badge/Rory%20Patrick%20Sheridan%20-MENTOR-lightblue?style=for-the-badge&logo=closed
 [database-schema]: /treatments/static/img/readme/database_schema.jpg
 
